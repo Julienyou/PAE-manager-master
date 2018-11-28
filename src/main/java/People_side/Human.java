@@ -9,12 +9,11 @@ public class Human {
         this.lastname = lastname;
     }
 
-    /*
-    * Getter for name + lastname
-    *
-    * inputs: void
-    * outputs: string (full name)
-    * */
+    /**
+     * Getter for name + lastname
+     *
+     * @return String (full name)
+     */
     public String getName(){
         return name + " " + lastname;
     }

@@ -23,35 +23,33 @@ public class StudentProgram {
         this.content = new HashMap<String, ObserverUE>();
     }
 
-    /*
+    /**
      * Getter for academic year
      *
-     * inputs: void
-     * outputs: String
-     * */
+     * @return String
+     */
     public String getAcYear(){
         return academic_year;
     }
 
-    /*
+    /**
      * Getter for content List
      *
-     * inputs: void
-     * outputs: List<ObserverUE>
-     * */
+     * @return Map<String, ObserverUE>
+     */
     public Map<String, ObserverUE> getContents(){
         return content;
     }
 
-    /*
+    /**
      * Add content to content list thanks to
      * year and code. f.e.: 4MIN, SA4L
      * -> uses year and code to fetch an ObservableUE
      * from ECAM to add a new ObserverUE to content
      *
-     * inputs: string, string (year, code)
-     * outputs: void
-     * */
+     * @param year String
+     * @param code String
+     */
     public void addContent(String year, String code){
         ECAM ecam = ECAM.getInstance();
         int int_year = Integer.parseInt(year.substring(0, 1));
@@ -70,13 +68,12 @@ public class StudentProgram {
         content.put(obs_ue.getCode(), obs_ue);
     }
 
-    /*
+    /**
      * Deletes content from the list after
      * being given a code
      *
-     * inputs: string (code)
-     * outputs: void
-     * */
+     * @param code String
+     */
     public void delContent(String code){
         for (String key: content.keySet()){
             if (key.equals(code)){
@@ -85,14 +82,13 @@ public class StudentProgram {
         }
     }
 
-    /*
+    /**
      * Calculates the total amount of credits
      * for a year by going through all the
      * program content and summing credits
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return int
+     */
     public int calcCredits(){
         int creds = 0;
         Iterator it = content.entrySet().iterator();
@@ -104,14 +100,13 @@ public class StudentProgram {
         return creds;
     }
 
-    /*
+    /**
      * Calculates the total amount of hours
      * for a year by going through all the
      * program content and summing hours
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return int
+     */
     public int calcHours(){
         int hours = 0;
         for(ObserverUE obs_ue: content.values()){
@@ -120,13 +115,12 @@ public class StudentProgram {
         return hours;
     }
 
-    /*
+    /**
      * Calculates the total amount of valid
      * credits for a year
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return int
+     */
     public int calcValidCredits(){
         int v_creds = 0;
         for(ObserverUE obs_ue: content.values()){
@@ -137,12 +131,12 @@ public class StudentProgram {
         return v_creds;
     }
 
-    /*
+    /**
      * Get a specific UEs of the program
      *
-     * inputs: String
-     * outputs: ObserverUE
-     * */
+     * @param  code String
+     * @return ObserverUE
+     */
     public ObserverUE getSpecificUE(String code) {
         Iterator it = content.entrySet().iterator();
         while(it.hasNext()){
@@ -154,20 +148,17 @@ public class StudentProgram {
         return null;
     }
 
-    /*
+    /**
      * Get a list of all UEs of the program
      *
-     * inputs: void
-     * outputs: List<UE>
-     * */
+     * @return Map<String, ObserverUE>
+     */
     public Map<String, ObserverUE> getUES() {return content;}
 
-    /* TESTING
+    /** TESTING
      * Inserts UEs into content for testing
      *
-     * inputs: void
-     * outputs: void
-     * */
+     */
     public void testSetParam(){
         ObserverUE ue1 = new ObserverUE("DD4L", "SA", "13152");
         ue1.setCredits(9);

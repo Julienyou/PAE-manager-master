@@ -17,62 +17,59 @@ public class Teacher extends Human {
         this.background = "Maths";
     }
 
-    /*
+    /**
      * Getter for ID
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return  int
+     */
     public int getID(){
         return ID;
     }
 
-    /*
+    /**
      * Getter for schedule
      *
-     * inputs: void
-     * outputs: List<Date>
-     * */
+     * @return List<Date>
+     */
     public void getSchedule(){}
 
-    /*
+    /**
      * Setter for a UE_classes.UE's info sheet
      *
-     * inputs: UE_classes.ObservableUE, string (path to info sheet)
-     * outputs: void
-     * */
+     * @param UE_classes.ObservableUE String
+     *                                path to info sheet
+     */
     public void setInfoSheet(){}
 
-    /*
+    /**
      * Setter for a UE_classes.UE's credits
      *
-     * inputs: UE_classes.ObservableUE, int
-     * outputs: void
-     * */
+     * @param UE_classes.ObservableUE int
+     */
     public void setCredits(){}
 
-    /*
+    /**
      * Setter for UE_classes.UE's hours
      *
-     * inputs: UE_classes.ObservableUE, int
-     * outputs: void
-     * */
+     * @param UE_classes.ObservableUE int
+     */
     public void setNHours(){}
 
-    /*
+    /**
      * Gets a student's history of student programs
      *
-     * inputs: int (student matricule)
+     * @param matricule int
+     *                  student matricule
      * outputs: List<People_side.StudentProgram>
-     * */
+     */
     public void getStudentPAE(){}
 
-    /*
+    /**
      * Accept a student into an UE_classes.UE, therefore turning the
      * acepted_status of that students UE_classes.ObserverUE to true
      *
-     * inputs: int (matricule)
-     * outputs: void
-     * */
+     * @param matricule int
+     *                  student matricule
+     */
     public void acceptStudent(){}
 }
