@@ -10,12 +10,12 @@ public class Program {
         this.years = new ArrayList<Bloc>(years);
     }
 
-    /*
+    /**
      * Get a specific ECAM_side.Bloc from a program
      *
-     * inputs: int (year)
-     * outputs: ECAM_side.Bloc
-     * */
+     * @param   int (year)
+     * @return  ECAM_side.Bloc
+     */
     public Bloc getBloc(int year){return years.get(year - 1);}
 
     public void addBloc(Bloc bloc){
