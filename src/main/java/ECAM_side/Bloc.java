@@ -13,22 +13,21 @@ public class Bloc {
         this.content = content;
     }
 
-    /*
+    /**
      * Get a specific UE from the UE hashmap
      *
-     * inputs: string (UE code)
-     * outputs: ObservableUE
-     * */
+     * @param  code String
+     * @return ObservableUE
+     */
     public ObservableUE getContent(String code){
         return content.get(code);
     }
 
-    /*
+    /**
      * Get a specific UE from the UE hashmap
      *
-     * inputs: string (UE code)
-     * outputs: ObservableUE
-     * */
+     * @param ue ObservableUE
+     */
     public void addContent(ObservableUE ue){
         String code = ue.getCode();
         content.put(code, ue);

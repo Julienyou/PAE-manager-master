@@ -14,19 +14,17 @@ public class Orientation {
 
     public String getName(){return name;}
 
-    /*
+    /**
      * Getter for bachelor
      *
-     * inputs: void
-     * outputs: ECAM_side.Program
-     * */
+     * @return ECAM_side.Program
+     */
     public Program getBachelor(){return bachelor;}
 
-    /*
+    /**
      * Getter for master
      *
-     * inputs: void
-     * outputs: ECAM_side.Program
-     * */
+     * @return ECAM_side.Program
+     */
     public Program getMaster(){return master;}
 }

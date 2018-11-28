@@ -12,80 +12,70 @@ public class UE {
         this.code = code;
     }
 
-    /*
+    /**
      * Getter for class code
      *
-     * inputs: void
-     * outputs: String
-     * */
+     * @return String
+     */
     public String getName(){return name;}
 
-    /*
-    * Getter for class code
-    *
-    * inputs: void
-    * outputs: String
-    * */
+    /**
+     * Getter for class code
+     *
+     * @return String
+     */
     public String getCode(){return code;}
 
-    /*
+    /**
      * Getter for class hours
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return int
+     */
     public int getHours(){return nhours;}
 
-    /*
+    /**
      * Setter for hours, int will probably be calculated
      * using the sum of UE_classes.ObservableClass's hours
      *
-     * inputs: int
-     * outputs: void
-     * */
+     * @param hours int
+     */
     public void setHours(int hours){nhours = hours;}
 
-    /*
+    /**
      * Getter for class credits
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return int
+     */
     public int getCredits(){return credits;}
 
-    /*
+    /**
      * Setter for credits, int will probably be calculated
      * using the sum of UE_classes.ObservableClass's credits
      *
-     * inputs: int
-     * outputs: void
-     * */
+     * @param creds int
+     */
     public void setCredits(int creds){credits = creds;}
 
-    /*
-    * Setter for infosheet, protected because Observer's
-    * access to this should be limited
-    *
-    * inputs: string (path to infosheet)
-    * outputs: void
-    * */
+    /**
+     * Setter for infosheet, protected because Observer's
+     * access to this should be limited
+     *
+     * @param path string
+     *             path to infosheet
+     */
     protected void setInfoSheet(String path){info_sheet = path;}
 
-    /*
+    /**
      * Getter for class infosheet
      *
-     * inputs: void
-     * outputs: String (path to infosheet)
-     * */
+     * @param String (path to infosheet)
+     */
     public String getInfoSheet(){ return info_sheet; }
 
-    /* TESTING
+    /** TESTING
      * Used in unit tests to modify private params
      *
-     * inputs: void
-     * outputs: void
-     * */
-
+     */
     public void testSetParam(){
         nhours = 30;
         credits = 30;

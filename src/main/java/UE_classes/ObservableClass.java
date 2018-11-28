@@ -18,37 +18,34 @@ public class ObservableClass extends Class {
         this.nhours = 10;
     }
 
-    /*
+    /**
      * Setter for hours
      *
-     * inputs: int
-     * outputs: void
-     * */
+     * @param hours int
+     */
     public void setNHours(int hours){
         nhours = hours;
     }
 
-    /*
+    /**
      * Adds a teacher to the teacher list
      *
-     * inputs: Teacher
-     * outputs: void
-     * */
+     * @param teacher Teacher
+     */
     public void addTeacher(Teacher teacher){
         teachers.put(teacher.getID(), teacher);
     }
 
-    /*
+    /**
      * Deletes a teacher from the teacher list
      *
-     * inputs: int (mapped id)
-     * outputs: void
-     * */
+     * @param id int
+     */
     public void delTeacher(int id){
         teachers.remove(id);
     }
 
-    /*
+    /**
      * Used when a student duplicates the parent UE
      * and puts it in his program. Will update this class and add
      * the ObservableClass to the observer list
@@ -58,9 +55,8 @@ public class ObservableClass extends Class {
      *
      * ->update specific Observable only
      *
-     * inputs: ObserverClass
-     * outputs: void
-     * */
+     * @param single_class ObserverClass
+     */
     public void duplicate(ObserverClass single_class){
         for (ObserverClass elem: observers) {
             if (single_class.getID() == elem.getID()) {
@@ -73,23 +69,20 @@ public class ObservableClass extends Class {
         single_class.update(getNHours());
     }
 
-    /*
+    /**
      * Notifies all observers they should update
      *
-     * inputs: void
-     * outputs: void
-     * */
+     */
     public void notifyObservers(){
         for (ObserverClass observer: observers) {
             observer.update(nhours);
         }
     }
 
-    /* TESTING
+    /** TESTING
      * Getter necessary for testing
      *
-     * inputs: void
-     * outputs: List<ObserverClass>
-     * */
+     * @return List<ObserverClass>
+     */
     public List<ObserverClass> getObservers(){ return observers; }
 }

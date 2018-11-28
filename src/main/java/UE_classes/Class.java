@@ -17,52 +17,46 @@ public class Class {
         this.teachers = new HashMap<Integer, Teacher>();
     }
 
-    /*
+    /**
      * Getter for name
      *
-     * inputs: void
-     * outputs: string
-     * */
+     * @return String
+     */
     public String getName(){ return this.name; }
 
-    /*
+    /**
      * Getter for code
      *
-     * inputs: void
-     * outputs: string
-     * */
+     * @return String
+     */
     public String getCode(){ return this.code; }
 
-    /*
+    /**
      * Getter for number of hours
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return int
+     */
     public int getNHours(){ return this.nhours; }
 
-    /*
+    /**
      * Setter for number of hours
      *
-     * inputs: int
-     * outputs: void
-     * */
+     * @param hours int
+     */
     public void setNHours(int hours){ this.nhours = hours; }
 
-    /*
+    /**
      * Getter for teacher list
      *
-     * inputs: void
-     * outputs: HashMap<Integer, Teacher>
-     * */
+     * @return HashMap<Integer, Teacher>
+     */
     public Map<Integer, Teacher> getTeachers(){ return this.teachers; }
 
-    /* TESTING
+    /** TESTING
      * Necessary for testing
      *
-     * inputs: void
-     * outputs: int
-     * */
+     * @return int
+     */
     public int testSetParam(){
         this.nhours = 10;
         Teacher cbf = new Teacher("Sebastien", "Combefis");
