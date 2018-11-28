@@ -1,0 +1,147 @@
+commentaires de Benjamin:
+
+Le fichier Specifications.pdf reprends le but general de projet, les fonctions
+nécessaires, et les metriques a tester. Il contient aussi quelques diagrammes mais
+il serait mieux d'utiliser le folder DiagramUML comme il est le plus mis a jour et
+contient aussi le diagram d'activité.
+
+I. les configurations
+--------------------------------------------------------------------------------------
+
+On a utilisé IntelliJ pour écrire le code et le gitignore ne fonctionne que pour
+intelliJ. Les configarations recommandées sont les suivantes:
+
+{P.S. Toutes les configurations devrait pouvoir étres recrées graces au contenu }
+{de Recommended Configurations							}
+
+a: Main (Application) => Pour lancer le code, on peut créer un étudiant et tester
+quelques fonctions principales de cette manière.
+IMPORTANT, le main prend un argument. Ci il est "testing" (args[0] == "testing")
+alors on travaille dans une boucle fermé qui est utilisé dans les tests
+ou sinon le code est lancé normalement
+==>dans les deux cas UN ARGUMENT EST NECESSAIRE.
+Mettez n'importe quoi d'autre que testing en argument pour lancer le code normalement
+ou créer 2 configurations, une pour tester et une pour lancer le code.
+
+b: ALL (JUnit) => Lance tout les testes, utile pour avoir une idée du nombre de test
+passant (tout les test doivent passer pour avoir un build passant sur Jenkins)
+Aussi tres utile pour le coverage. Pour voir comment avoir le coverage sur IntelliJ
+voir le fichier TutoCoverage.mht
+
+c: mvn-Main (Maven) => Lance la commande mvn clean compile verify. Ceci teste le
+projet maven et 1) le restaure a son état d'origine, 2) vérifie que le build du
+projet fonctione et 3) lances les tests. Très utile pour vérifier que le build
+foncionne avant de faire un push et de l'envoyer sur Jenkins. nécessaire si Jenkins
+n'a pas l'air de reconnaitre le projet (ce qui ne devrait pas être le cas)
+
+d: Cobertura (Maven) => *optionel Permet de lancer la commande Cobertura pour mieux
+comprendre cobertura, tout seul cobertura:cobertura crée tout les fichiers de coverage
+--> 1 par classe; mais cobertura:cobertura -Dcobertura.report.format=xml les regroupes
+dans un fichier xml (target/site/cobertura/coverage.xml) nécaissaire pour Jenkins.
+
+e: Jdepend (Maven) => *optionel Utilisé pour tester Jdepend avant de le tester sur
+Jenkins, lance tout simplement mvn clean site pour créer tout les fichiers nécessaires
+les deux qui nous interessent sont 1) target/jdepend-report.xml: le fichier dont
+Jenkins a besoin pour son rapport, 2) target/site/jdepend-report.html fichier html
+permettant de voir tout les metriques de couplage dans une page web. Utile pour
+travailler en local
+
+II. Jenkins
+--------------------------------------------------------------------------------------
+
+Pour Jenkins tout est plus ou moins terminé. Un push sur n'importe quelle branche
+crée automatiquement un build et cela verifie le conventions de codage (checkstyle)
+les test unitaires (JUnit) et le coverage (Cobertura)
+
+Pour les conventions de codage, ils ont un peu été décidées en dernière minute et
+ont étés, pour être honnête, complétement ignorées. Il y a donc beaucoup de warnings
+
+Les test unitaires ont été fait au fûr et a mesures et sont donc pas mal pour les
+fonctions concérnées. Par contre certaines fonctions écrites vers l'approche de la
+deadline n'ont pas étés testés. Le package ECAM_side en particulier. Le coverage
+souffre donc de cela. 
+UPDATE: tout est maintenant testé appart tout ce qui est en rapport avec les profs.
+
+Pour les metriques liés au couplage, ca fonctionne. Par contre c'est un peu caché.
+Pour les voirs il faut selectionner un build spécifique et puis cliquer sur
+JDepend.
+
+Pour ce qui reste a faire sur jenkins: Une des metriques du projet est le nombre de
+fonctions commenté. Chaque fonction est supposé être commenté avec les inputs et
+les outputs, pour l'instant on n'a pas de metriques pour visualiser cela.
+
+III. le code
+--------------------------------------------------------------------------------------
+
+Le code a été rushé vers la fin est manque pas mal de features. Toutes la partie
+Teacher est absente par example dans notre V1. En plus de cela notre V1 tel que rendu
+n'est pas forcement representative du projet final. Le Main telle qu'il est, a été crée
+pour avoir quelque chose de fonctionel mais ne correspond pas forcement au diagramme
+d'activité. Cependant, je pense que la partie la plus complique a déjà été terminé et
+avec les bases qui ont été faites (comme il faut absolument les avoir pour pouvoir
+tester/coder les étudiants, leurs programmes ou les profs).
+
+Pour ce qui est du diagramme de classes, il ne faut pas le suivre à la lettre. Il y a
+eu pas mal de petits changement comme de setters/getters nécaissaires soit pour le code,
+soit pour les tests. Il y a eu aussi quelques gros changements du coté Observer mais
+en tout et pour tout la structure du diagramme de classes reste correcte et reste
+suffisant pour avoir une idée de comment le code fontionne.
+
+IV. liens utiles
+--------------------------------------------------------------------------------------
+
+Github: https://github.com/benjvdb9/PAE-manager
+Jenkins: https://jenkins.ecam.be/job/PAE-manager/job/PAE/
+Specifications: https://docs.google.com/document/d/1WIN8Yr4fJRLfjARc1CfKGVpqpfs5jMg1zA1cRwx_xwE/edit?fbclid=IwAR0AP6-hjbMiZWAbym5RtC9vRsV5VjgHg38pyAnajOwjwdeL4lOcy1Vz2DI
+Facebook: https://www.facebook.com/groups/2086982478298025/?ref=bookmarks
+
+V. Metriques
+--------------------------------------------------------------------------------------
+
+Les métriques à mesures ont été mentioné dans les docs mais j'ai réalisé que celui
+qui a écrit le fichier n'a jamais mentioné les valeurs visées
+(CE QUI REND LES METRIQUES TOTALEMENT INUTILES!)
+
+Je vais donc m'occuper de cette partie la:
+Coverage: 90+%
+Fonctions commentées (inputs/outputs): 100%
+Couplage: Instabilité moyenne sur le projet de 50% au moins
+
+->A vous de commenté ci les objectifs ont été atteints
+Et pour le couplage ont a des classes assez instable pour l'instant, a vous de
+dire pourquoi
+
+P.S.: Les specifications disant que le nombre de commentaires est une métrique mais
+en faite c'était le nombre de fonctions commenté (description + inputs/outputs)
+comme c'est utile pour les test unitaires
+
+VI. Resumé
+--------------------------------------------------------------------------------------
+
+PRO:
+Jenkins checkstyle en place
+Jenkins coverage en place
+Jenkins Junit en place
+Jenkins mesure le couplage
+Visualisation du build et du coverage sur hithub grâce au badges
+Le package EU_classes et completement terminé
+L'etudiant est capable d'executer toutes les fonctions spécifiés dans le diagramme de cas d'utilisation
+Toutes les fonctions du diagramme de classes sont la et commentées avec les inputs et les outputs
+Toutes les fonctions utilisées dans la V1 sont testées
+
+CON:
+Pas de verification du metrique du nombre de fonctions a commenté. Pourrait etre
+implémenté grâce au checkstyle
+
+Toutes la partie professeur est manquant, cependant, toutes les classes que le
+professeur doit utilisé sont finies et cette partie la devrait être terminée assez
+rapidement
+
+Toutes les fonctions sont presque la mais il faut créer une vrai boucle main comme
+définit dans le diagramme d'activité.
+
+Pas de base de donnée du tout. Le schema pour la DB a été fait mais rien du tout
+n'a été implementé en SQL. Pour l'instant, tout est tout le temps instancié dans
+ECAM.init()
+
+Meuilleur gestion des erreurs nécessaire.
