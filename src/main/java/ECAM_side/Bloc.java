@@ -16,8 +16,8 @@ public class Bloc {
     /**
      * Get a specific UE from the UE hashmap
      *
-     * @param   String (UE code)
-     * @return  ObservableUE
+     * @param  code String
+     * @return ObservableUE
      */
     public ObservableUE getContent(String code){
         return content.get(code);
@@ -26,7 +26,7 @@ public class Bloc {
     /**
      * Get a specific UE from the UE hashmap
      *
-     * @param  ObservableUE
+     * @param ue ObservableUE
      */
     public void addContent(ObservableUE ue){
         String code = ue.getCode();

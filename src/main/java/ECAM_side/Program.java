@@ -13,8 +13,8 @@ public class Program {
     /**
      * Get a specific ECAM_side.Bloc from a program
      *
-     * @param   int (year)
-     * @return  ECAM_side.Bloc
+     * @param  year int
+     * @return ECAM_side.Bloc
      */
     public Bloc getBloc(int year){return years.get(year - 1);}
 

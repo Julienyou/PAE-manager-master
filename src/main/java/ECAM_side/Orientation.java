@@ -17,16 +17,14 @@ public class Orientation {
     /**
      * Getter for bachelor
      *
-     * @param   void
-     * @return  ECAM_side.Program
+     * @return ECAM_side.Program
      */
     public Program getBachelor(){return bachelor;}
 
     /**
      * Getter for master
      *
-     * @param   void
-     * @return  ECAM_side.Program
+     * @return ECAM_side.Program
      */
     public Program getMaster(){return master;}
 }

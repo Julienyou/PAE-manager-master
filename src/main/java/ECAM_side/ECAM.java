@@ -24,7 +24,6 @@ public class ECAM {
     /**
      * Get singleton instance
      *
-     * @param  void
      * @return ECAM_side.ECAM
      */
     public static ECAM getInstance(){ return instance; }
@@ -39,7 +38,7 @@ public class ECAM {
      * -> Informatique
      * -> Electromecanique
      *
-     * @param String (orientation code)
+     * @param  code String
      * @return ECAM_side.Orientation
      */
     public Orientation getOrientation(String code){
@@ -51,14 +50,13 @@ public class ECAM {
      * People_side.Teacher ID will be used for mapping
      *
      * @param  People_side.Teacher
-     * @return void
      */
     public void addTeacher(){}
 
     /**
      * Gets a specific student though its id
      *
-     * @param  String
+     * @param  matricule String
      * @return Student
      */
     public Student getStudent(String matricule){ return students.get(Integer.parseInt(matricule)); }
@@ -67,7 +65,7 @@ public class ECAM {
      * Adds a student to student list
      * People_side.Student ID will be used for mapping
      *
-     * @param People_side.Student
+     * @param std People_side.Student
      */
     public void addStudent(Student std){students.put(std.getID(), std);}
 
