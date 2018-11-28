@@ -15,34 +15,30 @@ public class ObserverClass extends Class {
         this.validated = false;
     }
 
-    /*
+    /**
      * Getter for static id, no two observervers
      * have the same id.
      *
-     * input: void
-     * output: int
-     * */
+     * @return int
+     */
     public int getID() {
         return id;
     }
 
-    /*
+    /**
      * Getter for owner (matricule)
      *
-     * input: void
-     * output: String
-     * */
+     * @return String
+     */
     public String getOwner() {
         return owner;
     }
 
-    /*
+    /**
      * Validates the class when used, if class is already
      * validated then it will invalidate it
      *
-     * inputs: void
-     * outputs: void
-     * */
+     */
     public void validate(){
         if (validated){
             validated = false;
@@ -51,22 +47,20 @@ public class ObserverClass extends Class {
         }
     }
 
-    /*
+    /**
      * Used in UE_classes.ObservableClass to update all observer
      * classes, puts the hours up to date
      *
-     * inputs: int (hours)
-     * outputs: void
-     * */
+     * @param hours int
+     */
     public void update(int hours){
         this.setNHours(hours);
     }
 
-    /* TESTING
+    /** TESTING
      * Necessary for unit tests
      *
-     * inputs: void
-     * outputs: Boolean
-     * */
+     * @return Boolean
+     */
     public Boolean getValidate(){ return validated; }
 }
