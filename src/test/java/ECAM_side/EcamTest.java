@@ -20,7 +20,7 @@ public class EcamTest {
 
     @Test
     public void getInstance() {
-        Assert.assertEquals("ECAM", ecam.getClass().getSimpleName());
+        Assert.assertEquals("Ecam", ecam.getClass().getSimpleName());
     }
 
     @Test
