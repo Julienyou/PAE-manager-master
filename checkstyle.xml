@@ -56,5 +56,8 @@
       <property name="format" value="^[a-z][a-z0-9]*(_[a-z0-9]+)*$"/>
     </module>
     <module name="MultipleVariableDeclarations"/>
+    <module name="JavadocMethod">
+      <property name="allowMissingJavadoc"/>
+    </module>
   </module>
 </module>
