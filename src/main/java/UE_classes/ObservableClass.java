@@ -1,13 +1,9 @@
 package UE_classes;
 
-import ECAM_side.Ecam;
-import People_side.Student;
 import People_side.Teacher;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ObservableClass extends Class {
     private List<ObserverClass> observers;
