@@ -31,8 +31,8 @@ public class ObserverClassTest {
     @Test
     public void update() {
         SA4T.update(3);
-        Assert.assertEquals(3, SA4T.getNHours());
+        Assert.assertEquals(3, SA4T.getNbrHours());
         SA4T.update(5);
-        Assert.assertEquals(5, SA4T.getNHours());
+        Assert.assertEquals(5, SA4T.getNbrHours());
     }
 }

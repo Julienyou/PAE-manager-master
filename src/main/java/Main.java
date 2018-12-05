@@ -5,7 +5,7 @@ import ECAM_side.Program;
 import People_side.Student;
 import People_side.Teacher;
 import UE_classes.ObservableClass;
-import UE_classes.ObservableUE;
+import UE_classes.ObservableUe;
 import UE_classes.ObserverUE;
 
 import java.util.Arrays;
@@ -24,10 +24,10 @@ public class Main {
         ObservableClass class3 = new ObservableClass("DD4Y", "3");
         ObservableClass class4 = new ObservableClass("DD4Z", "4");
 
-        ObservableUE ue1 = new ObservableUE("DD", "SA");
+        ObservableUe ue1 = new ObservableUe("DD", "SA");
         ue1.setCredits(99);
         ue1.setHours(90);
-        ObservableUE ue2 = new ObservableUE("DX", "SX");
+        ObservableUe ue2 = new ObservableUe("DX", "SX");
         ue2.setCredits(2);
         ue2.setHours(9);
 
@@ -36,7 +36,7 @@ public class Main {
         ue2.addClass(class3);
         ue2.addClass(class4);
 
-        HashMap<String, ObservableUE> ues = new HashMap<String, ObservableUE>();
+        HashMap<String, ObservableUe> ues = new HashMap<String, ObservableUe>();
         ues.put(ue1.getCode(), ue1);
         ues.put(ue2.getCode(), ue2);
         Bloc bloc1 = new Bloc(ues);

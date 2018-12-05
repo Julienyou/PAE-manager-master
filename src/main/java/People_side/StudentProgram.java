@@ -3,7 +3,7 @@ package People_side;
 import ECAM_side.Bloc;
 import ECAM_side.Ecam;
 import ECAM_side.Program;
-import UE_classes.ObservableUE;
+import UE_classes.ObservableUe;
 import UE_classes.ObserverUE;
 
 import java.util.*;
@@ -44,7 +44,7 @@ public class StudentProgram {
     /**
      * Add content to content list thanks to
      * year and code. f.e.: 4MIN, SA4L
-     * -> uses year and code to fetch an ObservableUE
+     * -> uses year and code to fetch an ObservableUe
      * from ECAM to add a new ObserverUE to content
      *
      * @param year String
@@ -55,7 +55,7 @@ public class StudentProgram {
         int int_year = Integer.parseInt(year.substring(0, 1));
         String orientation =  year.substring(1);
 
-        ObservableUE ue = new ObservableUE("", "");
+        ObservableUe ue = new ObservableUe("", "");
         if (int_year <= 3) {
             ue = ecam.getOrientation(orientation).getBachelor().getBloc(int_year).getContent(code);
         } else {

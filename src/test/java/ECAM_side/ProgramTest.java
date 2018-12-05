@@ -1,6 +1,6 @@
 package ECAM_side;
 
-import UE_classes.ObservableUE;
+import UE_classes.ObservableUe;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +31,7 @@ public class ProgramTest {
 
     @Test
     public void addBloc() {
-        mas.addBloc(new Bloc(new HashMap<String, ObservableUE>()));
+        mas.addBloc(new Bloc(new HashMap<String, ObservableUe>()));
         Assert.assertNotNull(mas.getBloc(3));
     }
 }

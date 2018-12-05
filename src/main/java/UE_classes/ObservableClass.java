@@ -23,7 +23,7 @@ public class ObservableClass extends Class {
      *
      * @param hours int
      */
-    public void setNHours(int hours){
+    public void setNbrHours(int hours){
         nhours = hours;
     }
 
@@ -60,13 +60,13 @@ public class ObservableClass extends Class {
     public void duplicate(ObserverClass single_class){
         for (ObserverClass elem: observers) {
             if (single_class.getId() == elem.getId()) {
-                elem.update(getNHours());
+                elem.update(getNbrHours());
                 return;
             }
         }
 
         observers.add(single_class);
-        single_class.update(getNHours());
+        single_class.update(getNbrHours());
     }
 
     /**
@@ -84,5 +84,7 @@ public class ObservableClass extends Class {
      *
      * @return List<ObserverClass>
      */
-    public List<ObserverClass> getObservers(){ return observers; }
+    public List<ObserverClass> getObservers(){
+        return observers;
+    }
 }

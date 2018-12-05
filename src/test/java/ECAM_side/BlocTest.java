@@ -1,6 +1,6 @@
 package ECAM_side;
 
-import UE_classes.ObservableUE;
+import UE_classes.ObservableUe;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,8 +21,8 @@ public class BlocTest {
 
     @Test
     public void getContent() {
-        ObservableUE ue1 = test_bloc.getContent("SA");
-        ObservableUE ue2 = test_bloc.getContent("SX");
+        ObservableUe ue1 = test_bloc.getContent("SA");
+        ObservableUe ue2 = test_bloc.getContent("SX");
         Assert.assertNotNull(ue1);
         Assert.assertNotNull(ue2);
         Assert.assertNotSame(ue1, ue2);
@@ -30,9 +30,9 @@ public class BlocTest {
 
     @Test
     public void addContent() {
-        ObservableUE ue3 = new ObservableUE("Mathématiques", "SY");
+        ObservableUe ue3 = new ObservableUe("Mathématiques", "SY");
         test_bloc.addContent(ue3);
-        ObservableUE ue = test_bloc.getContent("SY");
+        ObservableUe ue = test_bloc.getContent("SY");
         Assert.assertNotNull(ue);
     }
 }

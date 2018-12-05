@@ -22,17 +22,17 @@ public class ClassTest {
     }
 
     @Test
-    public void getNHours() {
+    public void getNbrHours() {
         SA4T.testSetParam();
-        Assert.assertEquals(10, SA4T.getNHours());
+        Assert.assertEquals(10, SA4T.getNbrHours());
     }
 
     @Test
-    public void setNHours() {
+    public void setNbrHours() {
         SA4T.testSetParam();
-        Assert.assertEquals(10, SA4T.getNHours());
-        SA4T.setNHours(5);
-        Assert.assertEquals(5, SA4T.getNHours());
+        Assert.assertEquals(10, SA4T.getNbrHours());
+        SA4T.setNbrHours(5);
+        Assert.assertEquals(5, SA4T.getNbrHours());
     }
 
     @Test

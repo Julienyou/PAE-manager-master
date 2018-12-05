@@ -53,7 +53,7 @@ public class Teacher extends Human {
      *
      * @param UE_classes.ObservableUE int
      */
-    public void setNbreHours(){}
+    public void setNbrHours(){}
 
     /**
      * Gets a student's history of student programs

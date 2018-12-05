@@ -54,7 +54,7 @@ public class ObserverClass extends Class {
      * @param hours int
      */
     public void update(int hours){
-        this.setNHours(hours);
+        this.setNbrHours(hours);
     }
 
     /** TESTING
