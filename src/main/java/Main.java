@@ -3,14 +3,12 @@ import ECAM_side.Ecam;
 import ECAM_side.Orientation;
 import ECAM_side.Program;
 import People_side.Student;
-import People_side.Teacher;
 import UE_classes.ObservableClass;
 import UE_classes.ObservableUe;
 import UE_classes.ObserverUe;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {

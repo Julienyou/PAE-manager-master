@@ -1,8 +1,6 @@
 package People_side;
 
-import ECAM_side.Bloc;
 import ECAM_side.Ecam;
-import ECAM_side.Program;
 import UE_classes.ObservableUe;
 import UE_classes.ObserverUe;
 
