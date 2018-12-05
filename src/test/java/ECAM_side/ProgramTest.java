@@ -15,9 +15,9 @@ public class ProgramTest {
 
     @Before
     public void setUp() throws Exception {
-        ECAM.getInstance().init();
-        bac = ECAM.getInstance().getOrientation("MIN").getBachelor();
-        mas = ECAM.getInstance().getOrientation("MIN").getMaster();
+        Ecam.getInstance().init();
+        bac = Ecam.getInstance().getOrientation("MIN").getBachelor();
+        mas = Ecam.getInstance().getOrientation("MIN").getMaster();
     }
 
     @Test

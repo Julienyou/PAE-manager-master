@@ -1,5 +1,5 @@
 import ECAM_side.Bloc;
-import ECAM_side.ECAM;
+import ECAM_side.Ecam;
 import ECAM_side.Orientation;
 import ECAM_side.Program;
 import People_side.Student;
@@ -46,10 +46,10 @@ public class Main {
         Bloc bloc5 = new Bloc(ues);
         Program bachelier = new Program(Arrays.asList(bloc1, bloc2, bloc3));
         Program master = new Program(Arrays.asList(bloc4, bloc5));
-        Orientation MIN = new Orientation("MIN", bachelier, master);
+        Orientation min = new Orientation("MIN", bachelier, master);
 
-        ECAM ecam = ECAM.getInstance();
-        ecam.addOrientation(MIN.getName(), MIN);
+        Ecam ecam = Ecam.getInstance();
+        ecam.addOrientation(min.getName(), min);
         //END INITIALIZE ECAM
 
         boolean testing;

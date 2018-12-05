@@ -1,7 +1,7 @@
 package People_side;
 
 import ECAM_side.Bloc;
-import ECAM_side.ECAM;
+import ECAM_side.Ecam;
 import ECAM_side.Program;
 import UE_classes.ObservableUE;
 import UE_classes.ObserverUE;
@@ -51,7 +51,7 @@ public class StudentProgram {
      * @param code String
      */
     public void addContent(String year, String code){
-        ECAM ecam = ECAM.getInstance();
+        Ecam ecam = Ecam.getInstance();
         int int_year = Integer.parseInt(year.substring(0, 1));
         String orientation =  year.substring(1);
 

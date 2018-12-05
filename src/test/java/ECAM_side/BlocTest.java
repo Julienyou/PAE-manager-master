@@ -15,8 +15,8 @@ public class BlocTest {
 
     @Before
     public void setUp() throws Exception {
-        ECAM.getInstance().init();
-        test_bloc = ECAM.getInstance().getOrientation("MIN").getMaster().getBloc(1);
+        Ecam.getInstance().init();
+        test_bloc = Ecam.getInstance().getOrientation("MIN").getMaster().getBloc(1);
     }
 
     @Test

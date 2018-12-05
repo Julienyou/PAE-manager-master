@@ -9,12 +9,12 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class ECAMTest {
+public class EcamTest {
 
-    ECAM ecam;
+    Ecam ecam;
     @Before
     public void setUp() throws Exception {
-        ecam = ECAM.getInstance();
+        ecam = Ecam.getInstance();
         ecam.init();
     }
 

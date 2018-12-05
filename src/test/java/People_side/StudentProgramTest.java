@@ -1,6 +1,6 @@
 package People_side;
 
-import ECAM_side.ECAM;
+import ECAM_side.Ecam;
 import UE_classes.ObserverUE;
 import org.junit.Assert;
 import org.junit.Test;
@@ -34,7 +34,7 @@ public class StudentProgramTest {
     public void addContent() {
         Map<String, ObserverUE> content = prog2018.getContents();
         Assert.assertTrue(content.isEmpty());
-        ECAM.getInstance().init();
+        Ecam.getInstance().init();
         prog2018.addContent("4MIN", "SA");
         Assert.assertFalse(content.isEmpty());
         Assert.assertEquals(prog2018.getUES().size(), 1);
@@ -43,7 +43,7 @@ public class StudentProgramTest {
 
     @Test
     public void delContent() {
-        ECAM.getInstance().init();
+        Ecam.getInstance().init();
         prog2018.addContent("4MIN", "SA");
         prog2018.addContent("4MIN", "SX");
         Assert.assertEquals(prog2018.getContents().size(), 2);

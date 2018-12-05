@@ -11,8 +11,8 @@ public class OrientationTest {
 
     @Before
     public void setUp() throws Exception {
-        ECAM.getInstance().init();
-        test = ECAM.getInstance().getOrientation("MIN");
+        Ecam.getInstance().init();
+        test = Ecam.getInstance().getOrientation("MIN");
     }
 
     @Test
