@@ -50,7 +50,7 @@ public class ObservableUETest {
         Assert.assertNotSame(47, ue2.getHours());
 
         DD4L.setHours(8);
-        DD4L.duplicate(ue1);
+        DD4L.notifyObservers();
         Assert.assertEquals(1, DD4L.getObservers().size());
         Assert.assertEquals(8, ue1.getHours());
         Assert.assertNotSame(8, ue2.getHours());

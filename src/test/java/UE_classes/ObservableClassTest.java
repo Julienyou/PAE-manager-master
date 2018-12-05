@@ -62,7 +62,7 @@ public class ObservableClassTest {
         Assert.assertNotSame(10, class2.getNHours());
 
         SA4T.setNHours(8);
-        SA4T.duplicate(class1);
+        SA4T.notifyObservers();
         Assert.assertEquals(1, SA4T.getObservers().size());
         Assert.assertEquals(8, class1.getNHours());
         Assert.assertNotSame(8, class2.getNHours());
