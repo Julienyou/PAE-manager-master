@@ -1,33 +1,37 @@
 package UE_classes;
 
-import UE_classes.UE;
+import UE_classes.Ue;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ObservableUE extends UE {
-    private List<ObserverUE> observers;
+public class ObservableUe extends Ue {
+    private List<ObserverUe> observers;
     private List<ObservableClass> classes;
 
-    public ObservableUE(String name, String code){
+    public ObservableUe(String name, String code){
         super(name, code);
-        this.observers = new ArrayList<ObserverUE>();
+        this.observers = new ArrayList<ObserverUe>();
         this.classes = new ArrayList<ObservableClass>();
     }
 
     /**
      * Getter for observers
      *
-     * @retun List<ObserverUE>
+     * @retun List<ObserverUe>
      */
-    public List<ObserverUE> getObservers() {return observers;}
+    public List<ObserverUe> getObservers() {
+        return observers;
+    }
 
     /**
      * Getter for classes
      *
      * @return List<ObservableClass>
      */
-    public List<ObservableClass> getClasses() {return classes;}
+    public List<ObservableClass> getClasses() {
+        return classes;
+    }
 
     /**
      * Calculates total hours from UE classes and
@@ -37,7 +41,7 @@ public class ObservableUE extends UE {
     public void calcHours(){
         int sum_h = 0;
         for (ObservableClass single_class: classes){
-            sum_h += single_class.getNHours();
+            sum_h += single_class.getNbrHours();
         }
         setHours(sum_h);
     }
@@ -47,10 +51,10 @@ public class ObservableUE extends UE {
      * and puts it in his program. Will update his instance
      * and all his class children classes
      *
-     * @param single_ue ObservableUE
+     * @param single_ue ObservableUe
      */
-    public void duplicate(ObserverUE single_ue){
-        for (ObserverUE ue: observers){
+    public void duplicate(ObserverUe single_ue){
+        for (ObserverUe ue: observers){
             if (single_ue.getId() == ue.getId()){
                 single_ue.update(getCredits(), getHours(), getInfoSheet());
                 return;
@@ -66,7 +70,7 @@ public class ObservableUE extends UE {
      *
      */
     public void notifyObservers(){
-        for (ObserverUE ue: observers){
+        for (ObserverUe ue: observers){
             ue.update(getCredits(), getHours(), getInfoSheet());
         }
     }
@@ -79,7 +83,7 @@ public class ObservableUE extends UE {
      * Modifies params for testing
      *
      */
-    public void testSetParam2(){
+    public void testSetParamTwo(){
         setHours(47);
         classes.add(new ObservableClass("SA4T", "1E0101"));
         classes.add(new ObservableClass("SA4L", "1E0102"));

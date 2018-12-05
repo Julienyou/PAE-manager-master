@@ -22,17 +22,17 @@ public class ClassTest {
     }
 
     @Test
-    public void getNHours() {
+    public void getNbrHours() {
         SA4T.testSetParam();
-        Assert.assertEquals(10, SA4T.getNHours());
+        Assert.assertEquals(10, SA4T.getNbrHours());
     }
 
     @Test
-    public void setNHours() {
+    public void setNbrHours() {
         SA4T.testSetParam();
-        Assert.assertEquals(10, SA4T.getNHours());
-        SA4T.setNHours(5);
-        Assert.assertEquals(5, SA4T.getNHours());
+        Assert.assertEquals(10, SA4T.getNbrHours());
+        SA4T.setNbrHours(5);
+        Assert.assertEquals(5, SA4T.getNbrHours());
     }
 
     @Test
@@ -41,9 +41,9 @@ public class ClassTest {
         Map<Integer, Teacher> teacher_list = SA4T.getTeachers();
         Teacher prof1 = teacher_list.get(cbf_id);
         Assert.assertEquals("Sebastien Combefis", prof1.getName());
-        Assert.assertEquals(cbf_id, prof1.getID());
+        Assert.assertEquals(cbf_id, prof1.getId());
         Teacher prof2 = teacher_list.get(cbf_id + 1);
         Assert.assertEquals("Quentin Lurkin", prof2.getName());
-        Assert.assertEquals(cbf_id + 1, prof2.getID());
+        Assert.assertEquals(cbf_id + 1, prof2.getId());
     }
 }

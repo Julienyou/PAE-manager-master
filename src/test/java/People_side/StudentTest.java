@@ -9,8 +9,8 @@ public class StudentTest {
     private Student MS = new Student("Matt", "Smith", 11);
 
     @Test
-    public void getID() {
-        int matricule = MS.getID();
+    public void getId() {
+        int matricule = MS.getId();
         Assert.assertEquals(11, matricule);
     }
 

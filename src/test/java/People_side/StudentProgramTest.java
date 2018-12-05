@@ -1,7 +1,7 @@
 package People_side;
 
-import ECAM_side.ECAM;
-import UE_classes.ObserverUE;
+import ECAM_side.Ecam;
+import UE_classes.ObserverUe;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,7 +22,7 @@ public class StudentProgramTest {
 
     @Test
     public void getContents() {
-        Map<String, ObserverUE> content = prog2018.getContents();
+        Map<String, ObserverUe> content = prog2018.getContents();
         Assert.assertTrue(content.isEmpty());
         prog2018.testSetParam();
         content = prog2018.getContents();
@@ -32,18 +32,18 @@ public class StudentProgramTest {
 
     @Test
     public void addContent() {
-        Map<String, ObserverUE> content = prog2018.getContents();
+        Map<String, ObserverUe> content = prog2018.getContents();
         Assert.assertTrue(content.isEmpty());
-        ECAM.getInstance().init();
+        Ecam.getInstance().init();
         prog2018.addContent("4MIN", "SA");
         Assert.assertFalse(content.isEmpty());
-        Assert.assertEquals(prog2018.getUES().size(), 1);
-        Assert.assertEquals(prog2018.getUES().get("SA").getName(), "DD");
+        Assert.assertEquals(prog2018.getUes().size(), 1);
+        Assert.assertEquals(prog2018.getUes().get("SA").getName(), "DD");
     }
 
     @Test
     public void delContent() {
-        ECAM.getInstance().init();
+        Ecam.getInstance().init();
         prog2018.addContent("4MIN", "SA");
         prog2018.addContent("4MIN", "SX");
         Assert.assertEquals(prog2018.getContents().size(), 2);
@@ -71,16 +71,16 @@ public class StudentProgramTest {
     }
 
     @Test
-    public void getSpecificUE() {
+    public void getSpecificUe() {
         prog2018.addContent("4MIN", "SA");
         prog2018.addContent("4MIN", "SX");
-        Assert.assertEquals(prog2018.getSpecificUE("SX").getName(), "DX");
+        Assert.assertEquals(prog2018.getSpecificUe("SX").getName(), "DX");
     }
 
     @Test
-    public void getUES() {
+    public void getUes() {
         prog2018.addContent("4MIN", "SA");
         prog2018.addContent("4MIN", "SX");
-        Assert.assertEquals(prog2018.getUES().size(), 2);
+        Assert.assertEquals(prog2018.getUes().size(), 2);
     }
 }

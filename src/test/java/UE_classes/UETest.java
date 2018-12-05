@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class UETest {
-    private UE DD4L = new UE("DD4L", "1E4014");
+    private Ue DD4L = new Ue("DD4L", "1E4014");
 
     @Test
     public void getName() {

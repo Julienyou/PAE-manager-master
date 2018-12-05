@@ -1,12 +1,12 @@
 import ECAM_side.Bloc;
-import ECAM_side.ECAM;
+import ECAM_side.Ecam;
 import ECAM_side.Orientation;
 import ECAM_side.Program;
 import People_side.Student;
 import People_side.Teacher;
 import UE_classes.ObservableClass;
-import UE_classes.ObservableUE;
-import UE_classes.ObserverUE;
+import UE_classes.ObservableUe;
+import UE_classes.ObserverUe;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -24,10 +24,10 @@ public class Main {
         ObservableClass class3 = new ObservableClass("DD4Y", "3");
         ObservableClass class4 = new ObservableClass("DD4Z", "4");
 
-        ObservableUE ue1 = new ObservableUE("DD", "SA");
+        ObservableUe ue1 = new ObservableUe("DD", "SA");
         ue1.setCredits(99);
         ue1.setHours(90);
-        ObservableUE ue2 = new ObservableUE("DX", "SX");
+        ObservableUe ue2 = new ObservableUe("DX", "SX");
         ue2.setCredits(2);
         ue2.setHours(9);
 
@@ -36,7 +36,7 @@ public class Main {
         ue2.addClass(class3);
         ue2.addClass(class4);
 
-        HashMap<String, ObservableUE> ues = new HashMap<String, ObservableUE>();
+        HashMap<String, ObservableUe> ues = new HashMap<String, ObservableUe>();
         ues.put(ue1.getCode(), ue1);
         ues.put(ue2.getCode(), ue2);
         Bloc bloc1 = new Bloc(ues);
@@ -46,10 +46,10 @@ public class Main {
         Bloc bloc5 = new Bloc(ues);
         Program bachelier = new Program(Arrays.asList(bloc1, bloc2, bloc3));
         Program master = new Program(Arrays.asList(bloc4, bloc5));
-        Orientation MIN = new Orientation("MIN", bachelier, master);
+        Orientation min = new Orientation("MIN", bachelier, master);
 
-        ECAM ecam = ECAM.getInstance();
-        ecam.addOrientation(MIN.getName(), MIN);
+        Ecam ecam = Ecam.getInstance();
+        ecam.addOrientation(min.getName(), min);
         //END INITIALIZE ECAM
 
         boolean testing;
@@ -72,7 +72,7 @@ public class Main {
             System.out.println(String.format("Hours: %d", test2));
             int test3 = std.getProgram().calcValidCredits();
             System.out.println(String.format("Validated Credits: %d", test3));
-            ObserverUE obs = std.getProgram().getSpecificUE("SA");
+            ObserverUe obs = std.getProgram().getSpecificUe("SA");
             obs.validate();
             int test4 = std.getProgram().calcValidCredits();
             System.out.println(String.format("Validated Credits: %d", test4));

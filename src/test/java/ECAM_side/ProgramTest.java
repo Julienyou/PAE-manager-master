@@ -1,6 +1,6 @@
 package ECAM_side;
 
-import UE_classes.ObservableUE;
+import UE_classes.ObservableUe;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,9 +15,9 @@ public class ProgramTest {
 
     @Before
     public void setUp() throws Exception {
-        ECAM.getInstance().init();
-        bac = ECAM.getInstance().getOrientation("MIN").getBachelor();
-        mas = ECAM.getInstance().getOrientation("MIN").getMaster();
+        Ecam.getInstance().init();
+        bac = Ecam.getInstance().getOrientation("MIN").getBachelor();
+        mas = Ecam.getInstance().getOrientation("MIN").getMaster();
     }
 
     @Test
@@ -31,7 +31,7 @@ public class ProgramTest {
 
     @Test
     public void addBloc() {
-        mas.addBloc(new Bloc(new HashMap<String, ObservableUE>()));
+        mas.addBloc(new Bloc(new HashMap<String, ObservableUe>()));
         Assert.assertNotNull(mas.getBloc(3));
     }
 }

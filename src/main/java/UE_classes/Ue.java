@@ -1,13 +1,13 @@
 package UE_classes;
 
-public class UE {
+public class Ue {
     private String name;
     private String code;
     private int nhours;
     private int credits;
     private String info_sheet;
 
-    public UE(String name, String code){
+    public Ue(String name, String code){
         this.name = name;
         this.code = code;
     }
@@ -17,21 +17,27 @@ public class UE {
      *
      * @return String
      */
-    public String getName(){return name;}
+    public String getName(){
+        return name;
+    }
 
     /**
      * Getter for class code
      *
      * @return String
      */
-    public String getCode(){return code;}
+    public String getCode(){
+        return code;
+    }
 
     /**
      * Getter for class hours
      *
      * @return int
      */
-    public int getHours(){return nhours;}
+    public int getHours(){
+        return nhours;
+    }
 
     /**
      * Setter for hours, int will probably be calculated
@@ -39,14 +45,18 @@ public class UE {
      *
      * @param hours int
      */
-    public void setHours(int hours){nhours = hours;}
+    public void setHours(int hours){
+        nhours = hours;
+    }
 
     /**
      * Getter for class credits
      *
      * @return int
      */
-    public int getCredits(){return credits;}
+    public int getCredits(){
+        return credits;
+    }
 
     /**
      * Setter for credits, int will probably be calculated
@@ -54,7 +64,9 @@ public class UE {
      *
      * @param creds int
      */
-    public void setCredits(int creds){credits = creds;}
+    public void setCredits(int creds){
+        credits = creds;
+    }
 
     /**
      * Setter for infosheet, protected because Observer's
@@ -63,14 +75,18 @@ public class UE {
      * @param path string
      *             path to infosheet
      */
-    protected void setInfoSheet(String path){info_sheet = path;}
+    protected void setInfoSheet(String path){
+        info_sheet = path;
+    }
 
     /**
      * Getter for class infosheet
      *
      * @param String (path to infosheet)
      */
-    public String getInfoSheet(){ return info_sheet; }
+    public String getInfoSheet(){
+        return info_sheet;
+    }
 
     /** TESTING
      * Used in unit tests to modify private params

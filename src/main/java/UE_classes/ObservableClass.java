@@ -1,6 +1,6 @@
 package UE_classes;
 
-import ECAM_side.ECAM;
+import ECAM_side.Ecam;
 import People_side.Student;
 import People_side.Teacher;
 
@@ -23,7 +23,7 @@ public class ObservableClass extends Class {
      *
      * @param hours int
      */
-    public void setNHours(int hours){
+    public void setNbrHours(int hours){
         nhours = hours;
     }
 
@@ -33,7 +33,7 @@ public class ObservableClass extends Class {
      * @param teacher Teacher
      */
     public void addTeacher(Teacher teacher){
-        teachers.put(teacher.getID(), teacher);
+        teachers.put(teacher.getId(), teacher);
     }
 
     /**
@@ -59,14 +59,14 @@ public class ObservableClass extends Class {
      */
     public void duplicate(ObserverClass single_class){
         for (ObserverClass elem: observers) {
-            if (single_class.getID() == elem.getID()) {
-                elem.update(getNHours());
+            if (single_class.getId() == elem.getId()) {
+                elem.update(getNbrHours());
                 return;
             }
         }
 
         observers.add(single_class);
-        single_class.update(getNHours());
+        single_class.update(getNbrHours());
     }
 
     /**
@@ -84,5 +84,7 @@ public class ObservableClass extends Class {
      *
      * @return List<ObserverClass>
      */
-    public List<ObserverClass> getObservers(){ return observers; }
+    public List<ObserverClass> getObservers(){
+        return observers;
+    }
 }
