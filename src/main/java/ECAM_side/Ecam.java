@@ -26,7 +26,9 @@ public class Ecam {
      *
      * @return ECAM_side.Ecam
      */
-    public static Ecam getInstance(){ return instance; }
+    public static Ecam getInstance(){
+        return instance;
+    }
 
     /**
      * Get specific orientation, orientations will be:
@@ -70,7 +72,7 @@ public class Ecam {
      * @param std People_side.Student
      */
     public void addStudent(Student std){
-        students.put(std.getID(), std);
+        students.put(std.getId(), std);
     }
 
     public void addOrientation(String code, Orientation orn){

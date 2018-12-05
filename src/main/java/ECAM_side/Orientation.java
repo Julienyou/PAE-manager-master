@@ -12,19 +12,25 @@ public class Orientation {
         this.name = name;
     }
 
-    public String getName(){return name;}
+    public String getName(){
+        return name;
+    }
 
     /**
      * Getter for bachelor
      *
      * @return ECAM_side.Program
      */
-    public Program getBachelor(){return bachelor;}
+    public Program getBachelor(){
+        return bachelor;
+    }
 
     /**
      * Getter for master
      *
      * @return ECAM_side.Program
      */
-    public Program getMaster(){return master;}
+    public Program getMaster(){
+        return master;
+    }
 }

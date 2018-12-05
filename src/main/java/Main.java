@@ -72,7 +72,7 @@ public class Main {
             System.out.println(String.format("Hours: %d", test2));
             int test3 = std.getProgram().calcValidCredits();
             System.out.println(String.format("Validated Credits: %d", test3));
-            ObserverUE obs = std.getProgram().getSpecificUE("SA");
+            ObserverUE obs = std.getProgram().getSpecificUe("SA");
             obs.validate();
             int test4 = std.getProgram().calcValidCredits();
             System.out.println(String.format("Validated Credits: %d", test4));

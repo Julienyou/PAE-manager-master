@@ -33,7 +33,7 @@ public class ObservableClass extends Class {
      * @param teacher Teacher
      */
     public void addTeacher(Teacher teacher){
-        teachers.put(teacher.getID(), teacher);
+        teachers.put(teacher.getId(), teacher);
     }
 
     /**
@@ -59,7 +59,7 @@ public class ObservableClass extends Class {
      */
     public void duplicate(ObserverClass single_class){
         for (ObserverClass elem: observers) {
-            if (single_class.getID() == elem.getID()) {
+            if (single_class.getId() == elem.getId()) {
                 elem.update(getNHours());
                 return;
             }

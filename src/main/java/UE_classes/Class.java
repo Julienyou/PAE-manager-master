@@ -61,8 +61,8 @@ public class Class {
         this.nhours = 10;
         Teacher cbf = new Teacher("Sebastien", "Combefis");
         Teacher lrk = new Teacher("Quentin", "Lurkin");
-        this.teachers.put(cbf.getID(), cbf);
-        this.teachers.put(lrk.getID(), lrk);
-        return cbf.getID();
+        this.teachers.put(cbf.getId(), cbf);
+        this.teachers.put(lrk.getId(), lrk);
+        return cbf.getId();
     }
 }

@@ -137,7 +137,7 @@ public class StudentProgram {
      * @param  code String
      * @return ObserverUE
      */
-    public ObserverUE getSpecificUE(String code) {
+    public ObserverUE getSpecificUe(String code) {
         Iterator it = content.entrySet().iterator();
         while(it.hasNext()){
             Map.Entry pair = (Map.Entry)it.next();
@@ -153,7 +153,9 @@ public class StudentProgram {
      *
      * @return Map<String, ObserverUE>
      */
-    public Map<String, ObserverUE> getUES() {return content;}
+    public Map<String, ObserverUE> getUes() {
+        return content;
+    }
 
     /** TESTING
      * Inserts UEs into content for testing

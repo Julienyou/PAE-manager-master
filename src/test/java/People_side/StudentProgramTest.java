@@ -37,8 +37,8 @@ public class StudentProgramTest {
         Ecam.getInstance().init();
         prog2018.addContent("4MIN", "SA");
         Assert.assertFalse(content.isEmpty());
-        Assert.assertEquals(prog2018.getUES().size(), 1);
-        Assert.assertEquals(prog2018.getUES().get("SA").getName(), "DD");
+        Assert.assertEquals(prog2018.getUes().size(), 1);
+        Assert.assertEquals(prog2018.getUes().get("SA").getName(), "DD");
     }
 
     @Test
@@ -71,16 +71,16 @@ public class StudentProgramTest {
     }
 
     @Test
-    public void getSpecificUE() {
+    public void getSpecificUe() {
         prog2018.addContent("4MIN", "SA");
         prog2018.addContent("4MIN", "SX");
-        Assert.assertEquals(prog2018.getSpecificUE("SX").getName(), "DX");
+        Assert.assertEquals(prog2018.getSpecificUe("SX").getName(), "DX");
     }
 
     @Test
-    public void getUES() {
+    public void getUes() {
         prog2018.addContent("4MIN", "SA");
         prog2018.addContent("4MIN", "SX");
-        Assert.assertEquals(prog2018.getUES().size(), 2);
+        Assert.assertEquals(prog2018.getUes().size(), 2);
     }
 }

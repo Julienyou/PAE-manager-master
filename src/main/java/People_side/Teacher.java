@@ -5,14 +5,14 @@ import java.util.Date;
 import java.util.List;
 
 public class Teacher extends Human {
-    private int ID;
+    private int id;
     private static int amount;
     private List<Date> schedule;
     private String background;
 
     public Teacher(String name, String lastname){
         super(name, lastname);
-        this.ID = ++amount;
+        this.id = ++amount;
         this.schedule = new ArrayList<Date>();
         this.background = "Maths";
     }
@@ -22,8 +22,8 @@ public class Teacher extends Human {
      *
      * @return  int
      */
-    public int getID(){
-        return ID;
+    public int getId(){
+        return this.id;
     }
 
     /**
@@ -53,7 +53,7 @@ public class Teacher extends Human {
      *
      * @param UE_classes.ObservableUE int
      */
-    public void setNHours(){}
+    public void setNbreHours(){}
 
     /**
      * Gets a student's history of student programs
@@ -62,7 +62,7 @@ public class Teacher extends Human {
      *                  student matricule
      * outputs: List<People_side.StudentProgram>
      */
-    public void getStudentPAE(){}
+    public void getStudentPae(){}
 
     /**
      * Accept a student into an UE_classes.UE, therefore turning the

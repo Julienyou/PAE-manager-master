@@ -21,7 +21,7 @@ public class ObserverClass extends Class {
      *
      * @return int
      */
-    public int getID() {
+    public int getId() {
         return id;
     }
 

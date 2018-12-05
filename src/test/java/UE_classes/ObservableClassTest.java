@@ -36,8 +36,8 @@ public class ObservableClassTest {
         Assert.assertFalse(teachers.isEmpty());
         SA4T.addTeacher(lrk);
         Assert.assertEquals(2, teachers.size());
-        Assert.assertEquals(cbf, teachers.get(cbf.getID()));
-        Assert.assertEquals(lrk, teachers.get(lrk.getID()));
+        Assert.assertEquals(cbf, teachers.get(cbf.getId()));
+        Assert.assertEquals(lrk, teachers.get(lrk.getId()));
     }
 
     @Test
@@ -47,9 +47,9 @@ public class ObservableClassTest {
         SA4T.addTeacher(cbf);
         SA4T.addTeacher(lrk);
         Assert.assertEquals(2, teachers.size());
-        SA4T.delTeacher(cbf.getID());
+        SA4T.delTeacher(cbf.getId());
         Assert.assertEquals(1, teachers.size());
-        Assert.assertEquals(lrk, teachers.get(lrk.getID()));
+        Assert.assertEquals(lrk, teachers.get(lrk.getId()));
     }
 
     @Test
@@ -57,7 +57,7 @@ public class ObservableClassTest {
         Assert.assertTrue(SA4T.getObservers().isEmpty());
         SA4T.duplicate(class1);
         Assert.assertFalse(SA4T.getObservers().isEmpty());
-        Assert.assertEquals(class1.getID(), SA4T.getObservers().get(0).getID());
+        Assert.assertEquals(class1.getId(), SA4T.getObservers().get(0).getId());
         Assert.assertEquals(10, class1.getNHours());
         Assert.assertNotSame(10, class2.getNHours());
 
