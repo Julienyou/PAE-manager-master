@@ -2,13 +2,10 @@ package People_side;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class Teacher extends Human {
     private int id;
     private static int amount;
-    private List<Date> schedule;
-    private String background;
 
     public Teacher(String name, String lastname){
         super(name, lastname);
