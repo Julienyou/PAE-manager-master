@@ -7,8 +7,10 @@ import UE_classes.ObserverUe;
 import java.util.*;
 
 public class StudentProgram {
+    private final String year;
     private final String academic_year;
     private final String owner;
+    private int ncredits;
     private Map<String, ObserverUe> content;
 
     public StudentProgram(String year, String acyear, String owner) {

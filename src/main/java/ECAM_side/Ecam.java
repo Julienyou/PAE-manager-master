@@ -12,6 +12,7 @@ import java.util.HashMap;
 public class Ecam {
     private static Ecam instance = new Ecam();
     private Map<String, Orientation> orientations;
+    private Map<Integer, Teacher> teachers;
     private Map<Integer, Student> students;
 
     private Ecam(){

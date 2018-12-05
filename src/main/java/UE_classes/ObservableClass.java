@@ -15,15 +15,6 @@ public class ObservableClass extends Class {
     }
 
     /**
-     * Setter for hours
-     *
-     * @param hours int
-     */
-    public void setNbrHours(int hours){
-        nhours = hours;
-    }
-
-    /**
      * Adds a teacher to the teacher list
      *
      * @param teacher Teacher
