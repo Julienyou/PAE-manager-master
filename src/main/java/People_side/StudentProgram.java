@@ -4,7 +4,7 @@ import ECAM_side.Bloc;
 import ECAM_side.Ecam;
 import ECAM_side.Program;
 import UE_classes.ObservableUe;
-import UE_classes.ObserverUE;
+import UE_classes.ObserverUe;
 
 import java.util.*;
 
@@ -13,14 +13,14 @@ public class StudentProgram {
     private final String academic_year;
     private final String owner;
     private int ncredits;
-    private Map<String, ObserverUE> content;
+    private Map<String, ObserverUe> content;
 
     public StudentProgram(String year, String acyear, String owner) {
         this.year = year;
         this.academic_year = acyear;
         this.owner = owner;
         this.ncredits = 0;
-        this.content = new HashMap<String, ObserverUE>();
+        this.content = new HashMap<String, ObserverUe>();
     }
 
     /**
@@ -35,9 +35,9 @@ public class StudentProgram {
     /**
      * Getter for content List
      *
-     * @return Map<String, ObserverUE>
+     * @return Map<String, ObserverUe>
      */
-    public Map<String, ObserverUE> getContents(){
+    public Map<String, ObserverUe> getContents(){
         return content;
     }
 
@@ -45,7 +45,7 @@ public class StudentProgram {
      * Add content to content list thanks to
      * year and code. f.e.: 4MIN, SA4L
      * -> uses year and code to fetch an ObservableUe
-     * from ECAM to add a new ObserverUE to content
+     * from ECAM to add a new ObserverUe to content
      *
      * @param year String
      * @param code String
@@ -62,7 +62,7 @@ public class StudentProgram {
             int_year = int_year - 3;
             ue = ecam.getOrientation(orientation).getMaster().getBloc(int_year).getContent(code);
         }
-        ObserverUE obs_ue = new ObserverUE(ue.getName(), code, owner);
+        ObserverUe obs_ue = new ObserverUe(ue.getName(), code, owner);
         ue.duplicate(obs_ue);
 
         content.put(obs_ue.getCode(), obs_ue);
@@ -94,7 +94,7 @@ public class StudentProgram {
         Iterator it = content.entrySet().iterator();
         while(it.hasNext()){
             Map.Entry pair = (Map.Entry)it.next();
-            ObserverUE obs_ue = (ObserverUE)pair.getValue();
+            ObserverUe obs_ue = (ObserverUe)pair.getValue();
             creds += obs_ue.getCredits();
         }
         return creds;
@@ -109,7 +109,7 @@ public class StudentProgram {
      */
     public int calcHours(){
         int hours = 0;
-        for(ObserverUE obs_ue: content.values()){
+        for(ObserverUe obs_ue: content.values()){
             hours += obs_ue.getHours();
         }
         return hours;
@@ -123,7 +123,7 @@ public class StudentProgram {
      */
     public int calcValidCredits(){
         int v_creds = 0;
-        for(ObserverUE obs_ue: content.values()){
+        for(ObserverUe obs_ue: content.values()){
             if (obs_ue.getValidated()){
                 v_creds += obs_ue.getCredits();
             }
@@ -135,14 +135,14 @@ public class StudentProgram {
      * Get a specific UEs of the program
      *
      * @param  code String
-     * @return ObserverUE
+     * @return ObserverUe
      */
-    public ObserverUE getSpecificUe(String code) {
+    public ObserverUe getSpecificUe(String code) {
         Iterator it = content.entrySet().iterator();
         while(it.hasNext()){
             Map.Entry pair = (Map.Entry)it.next();
             if (pair.getKey().equals(code)){
-                return (ObserverUE)pair.getValue();
+                return (ObserverUe)pair.getValue();
             }
         }
         return null;
@@ -151,9 +151,9 @@ public class StudentProgram {
     /**
      * Get a list of all UEs of the program
      *
-     * @return Map<String, ObserverUE>
+     * @return Map<String, ObserverUe>
      */
-    public Map<String, ObserverUE> getUes() {
+    public Map<String, ObserverUe> getUes() {
         return content;
     }
 
@@ -162,10 +162,10 @@ public class StudentProgram {
      *
      */
     public void testSetParam(){
-        ObserverUE ue1 = new ObserverUE("DD4L", "SA", "13152");
+        ObserverUe ue1 = new ObserverUe("DD4L", "SA", "13152");
         ue1.setCredits(9);
         ue1.setHours(99);
-        ObserverUE ue2 = new ObserverUE("DD4X", "SX", "13152");
+        ObserverUe ue2 = new ObserverUe("DD4X", "SX", "13152");
         ue2.setCredits(8);
         ue2.setHours(88);
         ue2.validate();

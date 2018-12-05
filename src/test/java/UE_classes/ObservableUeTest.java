@@ -10,16 +10,16 @@ import java.util.List;
 public class ObservableUeTest {
     ObservableUe DD4L = new ObservableUe("DD4L", "1E4014");
 
-    ObserverUE ue1 = new ObserverUE("DD4L", "1E4014", "13152");
-    ObserverUE ue2 = new ObserverUE("DD4L", "1E4014", "13152");
-    ObserverUE ue3 = new ObserverUE("DD4L", "1E4014", "13152");
+    ObserverUe ue1 = new ObserverUe("DD4L", "1E4014", "13152");
+    ObserverUe ue2 = new ObserverUe("DD4L", "1E4014", "13152");
+    ObserverUe ue3 = new ObserverUe("DD4L", "1E4014", "13152");
 
     @Test
     public void getObservers() {
         DD4L.duplicate(ue1);
         DD4L.duplicate(ue2);
         DD4L.duplicate(ue3);
-        List<ObserverUE> obsr = Arrays.asList(ue1, ue2, ue3);
+        List<ObserverUe> obsr = Arrays.asList(ue1, ue2, ue3);
         Assert.assertEquals(obsr, DD4L.getObservers());
     }
 

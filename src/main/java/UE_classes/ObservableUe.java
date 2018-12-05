@@ -1,26 +1,26 @@
 package UE_classes;
 
-import UE_classes.UE;
+import UE_classes.Ue;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ObservableUe extends UE {
-    private List<ObserverUE> observers;
+public class ObservableUe extends Ue {
+    private List<ObserverUe> observers;
     private List<ObservableClass> classes;
 
     public ObservableUe(String name, String code){
         super(name, code);
-        this.observers = new ArrayList<ObserverUE>();
+        this.observers = new ArrayList<ObserverUe>();
         this.classes = new ArrayList<ObservableClass>();
     }
 
     /**
      * Getter for observers
      *
-     * @retun List<ObserverUE>
+     * @retun List<ObserverUe>
      */
-    public List<ObserverUE> getObservers() {
+    public List<ObserverUe> getObservers() {
         return observers;
     }
 
@@ -53,8 +53,8 @@ public class ObservableUe extends UE {
      *
      * @param single_ue ObservableUe
      */
-    public void duplicate(ObserverUE single_ue){
-        for (ObserverUE ue: observers){
+    public void duplicate(ObserverUe single_ue){
+        for (ObserverUe ue: observers){
             if (single_ue.getId() == ue.getId()){
                 single_ue.update(getCredits(), getHours(), getInfoSheet());
                 return;
@@ -70,7 +70,7 @@ public class ObservableUe extends UE {
      *
      */
     public void notifyObservers(){
-        for (ObserverUE ue: observers){
+        for (ObserverUe ue: observers){
             ue.update(getCredits(), getHours(), getInfoSheet());
         }
     }

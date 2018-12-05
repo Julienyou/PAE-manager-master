@@ -62,5 +62,7 @@ public class ObserverClass extends Class {
      *
      * @return Boolean
      */
-    public Boolean getValidate(){ return validated; }
+    public Boolean getValidate(){
+        return validated;
+    }
 }

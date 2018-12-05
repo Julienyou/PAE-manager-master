@@ -6,7 +6,7 @@ import People_side.Student;
 import People_side.Teacher;
 import UE_classes.ObservableClass;
 import UE_classes.ObservableUe;
-import UE_classes.ObserverUE;
+import UE_classes.ObserverUe;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -72,7 +72,7 @@ public class Main {
             System.out.println(String.format("Hours: %d", test2));
             int test3 = std.getProgram().calcValidCredits();
             System.out.println(String.format("Validated Credits: %d", test3));
-            ObserverUE obs = std.getProgram().getSpecificUe("SA");
+            ObserverUe obs = std.getProgram().getSpecificUe("SA");
             obs.validate();
             int test4 = std.getProgram().calcValidCredits();
             System.out.println(String.format("Validated Credits: %d", test4));

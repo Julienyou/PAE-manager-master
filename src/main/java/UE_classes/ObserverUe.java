@@ -1,12 +1,12 @@
 package UE_classes;
 
-import UE_classes.UE;
+import UE_classes.Ue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ObserverUE extends UE {
+public class ObserverUe extends Ue {
     private int id;
     private String owner;
     private Boolean validated;
@@ -14,7 +14,7 @@ public class ObserverUE extends UE {
     private Boolean accept_status;
     private List<ObserverClass> classes;
 
-    public ObserverUE(String name, String code, String owner){
+    public ObserverUe(String name, String code, String owner){
         super(name, code);
         this.id = ++amount;
         this.owner = owner;
@@ -41,14 +41,18 @@ public class ObserverUE extends UE {
      *
      * @return int
      */
-    public int getId(){return id;}
+    public int getId(){
+        return id;
+    }
 
     /**
      * Getter for owner
      *
      * @return String
      */
-    public String getOwner(){return owner;}
+    public String getOwner(){
+        return owner;
+    }
 
     /**
      * Getter for accepted_status to know whether
@@ -56,14 +60,18 @@ public class ObserverUE extends UE {
      *
      * @return Boolean
      */
-    public Boolean getStatus(){return accept_status;}
+    public Boolean getStatus(){
+        return accept_status;
+    }
 
     /**
      * Getter for classes
      *
      * @return List<ObserverClass>
      */
-    public List<ObserverClass> getClasses() {return classes;}
+    public List<ObserverClass> getClasses() {
+        return classes;
+    }
 
     /**
      * Calculates total validated credits from UE classes and
@@ -82,7 +90,7 @@ public class ObserverUE extends UE {
 
     /**
      * Function called whenever a change happens in corresponding
-     * ObservableUE, should recalculate hours and credits and update
+     * ObservableUe, should recalculate hours and credits and update
      * the info sheet -> calculated in Observable
      *
      * @param credits    int
@@ -100,13 +108,15 @@ public class ObserverUE extends UE {
      *
      * @return Boolean
      */
-    public Boolean getValidated(){return validated;}
+    public Boolean getValidated(){
+        return validated;
+    }
 
     /** TESTING
      * Modifies params for testing
      *
      */
-    public void testSetParam2(){
+    public void testSetParamTwo(){
         accept_status = true;
         classes.add(new ObserverClass("SA4T", "1E0101", "13152"));
         classes.add(new ObserverClass("SA4L", "1E0102", "13152"));

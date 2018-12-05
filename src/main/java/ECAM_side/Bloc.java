@@ -1,7 +1,7 @@
 package ECAM_side;
 
 import UE_classes.ObservableUe;
-import UE_classes.ObserverUE;
+import UE_classes.ObserverUe;
 
 import java.util.HashMap;
 import java.util.Map;
