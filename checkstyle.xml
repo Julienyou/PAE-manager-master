@@ -58,6 +58,7 @@
     <module name="MultipleVariableDeclarations"/>
     <module name="JavadocMethod">
       <property name="allowMissingJavadoc" value="false"/>
+      <property name="scope" value="public"/>
     </module>
   </module>
 </module>
