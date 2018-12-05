@@ -81,7 +81,7 @@ public class Main {
             System.out.println("Enter command: ");
             String command = sc.nextLine();
 
-            if (command.equals("student")){
+            if ("student".equals(command)){
                 System.out.println("Create Student ->");
                 System.out.print("First name: ");
                 String fname = sc.nextLine();
@@ -103,7 +103,7 @@ public class Main {
                 while (true){
                     System.out.println("Commands: add, cred, hours");
                     command = sc.nextLine();
-                    if (command.equals("add")){
+                    if ("add".equals(command)){
                         System.out.println("Adding UE to Program");
                         System.out.print("UE year name (4MIN): ");
                         String ue_year = sc.nextLine();
@@ -111,15 +111,15 @@ public class Main {
                         String ue_code = sc.nextLine();
                         std.getProgram().addContent(ue_year, ue_code);
                         System.out.println("Added UE to Program!");
-                    } else if (command.equals("cred")){
+                    } else if ("cred".equals(command)){
                         int creds = std.getProgram().calcCredits();
                         String res1 = String.format("You have %d credits this year", creds);
                         System.out.println(res1);
-                    } else if (command.equals("hours")) {
+                    } else if ("hours".equals(command)) {
                         int hours = std.getProgram().calcHours();
                         String res2 = String.format("You have %d hours this year", hours);
                         System.out.println(res2);
-                    } else if (command.equals("valid")) {
+                    } else if ("valid".equals(command)) {
                         int v_creds = std.getProgram().calcValidCredits();
                         String res3 = String.format("You have %d valid credits this year", v_creds);
                         System.out.println(res3);
