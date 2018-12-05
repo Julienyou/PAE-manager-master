@@ -17,7 +17,6 @@
         <exclude name="GuardLogStatement"/>
         <!-- Till https://github.com/pmd/pmd/issues/1181 -->
         <exclude name="UnusedPrivateMethod"/>
-        <exclude name="SystemPrintln"/>
     </rule>
     <rule ref="category/java/bestpractices.xml/AvoidPrintStackTrace">
         <properties>
@@ -32,6 +31,15 @@
             <property name="violationSuppressXPath"
                       value="//ClassOrInterfaceDeclaration[@Image='JavadocCatchCheck']
                            //MethodDeclaration[@Name='visitJavadocToken']"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/bestpractices.xml/SystemPrintln">
+        <properties>
+            <!-- it is ok to use println in CLI class. -->
+            <property name="violationSuppressXPath"
+                      value="//ClassOrInterfaceDeclaration
+                       [@Image='Main' or @Image='Main$CliOptions'
+                       or @Image='JavadocPropertiesGenerator']"/>
         </properties>
     </rule>
 
