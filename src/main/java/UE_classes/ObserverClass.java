@@ -1,6 +1,5 @@
 package UE_classes;
 
-import UE_classes.Class;
 
 public class ObserverClass extends Class {
     private int id;
@@ -21,7 +20,7 @@ public class ObserverClass extends Class {
      *
      * @return int
      */
-    public int getID() {
+    public int getId() {
         return id;
     }
 
@@ -54,7 +53,7 @@ public class ObserverClass extends Class {
      * @param hours int
      */
     public void update(int hours){
-        this.setNHours(hours);
+        this.setNbrHours(hours);
     }
 
     /** TESTING
@@ -62,5 +61,7 @@ public class ObserverClass extends Class {
      *
      * @return Boolean
      */
-    public Boolean getValidate(){ return validated; }
+    public Boolean getValidate(){
+        return validated;
+    }
 }

@@ -22,35 +22,45 @@ public class Class {
      *
      * @return String
      */
-    public String getName(){ return this.name; }
+    public String getName(){
+        return this.name;
+    }
 
     /**
      * Getter for code
      *
      * @return String
      */
-    public String getCode(){ return this.code; }
+    public String getCode(){
+        return this.code;
+    }
 
     /**
      * Getter for number of hours
      *
      * @return int
      */
-    public int getNHours(){ return this.nhours; }
+    public int getNbrHours(){
+        return this.nhours;
+    }
 
     /**
      * Setter for number of hours
      *
      * @param hours int
      */
-    public void setNHours(int hours){ this.nhours = hours; }
+    public void setNbrHours(int hours){
+        this.nhours = hours;
+    }
 
     /**
      * Getter for teacher list
      *
      * @return HashMap<Integer, Teacher>
      */
-    public Map<Integer, Teacher> getTeachers(){ return this.teachers; }
+    public Map<Integer, Teacher> getTeachers(){
+        return this.teachers;
+    }
 
     /** TESTING
      * Necessary for testing
@@ -61,8 +71,8 @@ public class Class {
         this.nhours = 10;
         Teacher cbf = new Teacher("Sebastien", "Combefis");
         Teacher lrk = new Teacher("Quentin", "Lurkin");
-        this.teachers.put(cbf.getID(), cbf);
-        this.teachers.put(lrk.getID(), lrk);
-        return cbf.getID();
+        this.teachers.put(cbf.getId(), cbf);
+        this.teachers.put(lrk.getId(), lrk);
+        return cbf.getId();
     }
 }

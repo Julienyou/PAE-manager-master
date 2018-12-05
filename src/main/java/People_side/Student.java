@@ -18,7 +18,9 @@ public class Student extends Human {
      *
      * @return int
      */
-    public int getID(){return matricule;}
+    public int getId(){
+        return matricule;
+    }
 
     /**
      * Gives back the status of a class after
@@ -27,14 +29,18 @@ public class Student extends Human {
      * @param  code String
      * @return Boolean (class status)
      */
-    public Boolean getStatus(String code){return false;}
+    public Boolean getStatus(String code){
+        return false;
+    }
 
     /**
      * Getter for last StudentProgram
      *
      * @return StudentProgram (last program)
      */
-    public StudentProgram getProgram() {return program.get(program.size() - 1);}
+    public StudentProgram getProgram() {
+        return program.get(program.size() - 1);
+    }
 
     /**
      * Gets the total amount of credits for the

@@ -10,9 +10,9 @@ public class ObserverClassTest {
     ObserverClass SA4L = new ObserverClass("SA4L", "1E0102", "13152");
 
     @Test
-    public void getID() {
-        int id1 = SA4T.getID();
-        int id2 = SA4L.getID();
+    public void getId() {
+        int id1 = SA4T.getId();
+        int id2 = SA4L.getId();
         Assert.assertNotSame(id1, id2);
     }
 
@@ -31,8 +31,8 @@ public class ObserverClassTest {
     @Test
     public void update() {
         SA4T.update(3);
-        Assert.assertEquals(3, SA4T.getNHours());
+        Assert.assertEquals(3, SA4T.getNbrHours());
         SA4T.update(5);
-        Assert.assertEquals(5, SA4T.getNHours());
+        Assert.assertEquals(5, SA4T.getNbrHours());
     }
 }

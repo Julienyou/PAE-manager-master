@@ -22,10 +22,10 @@ public class ObservableClassTest {
 
 
     @Test
-    public void setNHours() {
-        Assert.assertEquals(10, SA4T.getNHours());
-        SA4T.setNHours(9);
-        Assert.assertEquals(9, SA4T.getNHours());
+    public void setNbrHours() {
+        Assert.assertEquals(10, SA4T.getNbrHours());
+        SA4T.setNbrHours(9);
+        Assert.assertEquals(9, SA4T.getNbrHours());
     }
 
     @Test
@@ -36,8 +36,8 @@ public class ObservableClassTest {
         Assert.assertFalse(teachers.isEmpty());
         SA4T.addTeacher(lrk);
         Assert.assertEquals(2, teachers.size());
-        Assert.assertEquals(cbf, teachers.get(cbf.getID()));
-        Assert.assertEquals(lrk, teachers.get(lrk.getID()));
+        Assert.assertEquals(cbf, teachers.get(cbf.getId()));
+        Assert.assertEquals(lrk, teachers.get(lrk.getId()));
     }
 
     @Test
@@ -47,9 +47,9 @@ public class ObservableClassTest {
         SA4T.addTeacher(cbf);
         SA4T.addTeacher(lrk);
         Assert.assertEquals(2, teachers.size());
-        SA4T.delTeacher(cbf.getID());
+        SA4T.delTeacher(cbf.getId());
         Assert.assertEquals(1, teachers.size());
-        Assert.assertEquals(lrk, teachers.get(lrk.getID()));
+        Assert.assertEquals(lrk, teachers.get(lrk.getId()));
     }
 
     @Test
@@ -57,26 +57,26 @@ public class ObservableClassTest {
         Assert.assertTrue(SA4T.getObservers().isEmpty());
         SA4T.duplicate(class1);
         Assert.assertFalse(SA4T.getObservers().isEmpty());
-        Assert.assertEquals(class1.getID(), SA4T.getObservers().get(0).getID());
-        Assert.assertEquals(10, class1.getNHours());
-        Assert.assertNotSame(10, class2.getNHours());
+        Assert.assertEquals(class1.getId(), SA4T.getObservers().get(0).getId());
+        Assert.assertEquals(10, class1.getNbrHours());
+        Assert.assertNotSame(10, class2.getNbrHours());
 
         SA4T.setNHours(8);
         SA4T.notifyObservers();
         Assert.assertEquals(1, SA4T.getObservers().size());
-        Assert.assertEquals(8, class1.getNHours());
-        Assert.assertNotSame(8, class2.getNHours());
-        Assert.assertNotSame(8, class3.getNHours());
+        Assert.assertEquals(8, class1.getNbrHours());
+        Assert.assertNotSame(8, class2.getNbrHours());
+        Assert.assertNotSame(8, class3.getNbrHours());
     }
 
     @Test
     public void notifyObservers() {
         SA4T.duplicate(class1);
         SA4T.duplicate(class2);
-        SA4T.setNHours(9);
+        SA4T.setNbrHours(9);
         SA4T.notifyObservers();
-        Assert.assertEquals(9, class1.getNHours());
-        Assert.assertEquals(9, class2.getNHours());
-        Assert.assertNotSame(9, class3.getNHours());
+        Assert.assertEquals(9, class1.getNbrHours());
+        Assert.assertEquals(9, class2.getNbrHours());
+        Assert.assertNotSame(9, class3.getNbrHours());
     }
 }
