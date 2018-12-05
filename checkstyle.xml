@@ -57,7 +57,7 @@
     </module>
     <module name="MultipleVariableDeclarations"/>
     <module name="JavadocMethod">
-      <property name="allowMissingJavadoc"/>
+      <property name="allowMissingJavadoc" value="false"/>
     </module>
   </module>
 </module>
