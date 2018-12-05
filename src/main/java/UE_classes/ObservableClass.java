@@ -1,6 +1,6 @@
 package UE_classes;
 
-import ECAM_side.ECAM;
+import ECAM_side.Ecam;
 import People_side.Student;
 import People_side.Teacher;
 
