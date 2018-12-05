@@ -67,14 +67,7 @@ public class Ue {
     public void setCredits(int creds){
         credits = creds;
     }
-
-    /**
-     * Setter for infosheet, protected because Observer's
-     * access to this should be limited
-     *
-     * @param path string
-     *             path to infosheet
-     */
+    
     protected void setInfoSheet(String path){
         info_sheet = path;
     }
