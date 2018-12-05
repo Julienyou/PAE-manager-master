@@ -17,6 +17,7 @@
     <exclude name="GuardLogStatement"/>
     <!-- Till https://github.com/pmd/pmd/issues/1181 -->
     <exclude name="UnusedPrivateMethod"/>
+    <exclude name="SystemPrintln"/>
   </rule>
   <rule ref="category/java/bestpractices.xml/AvoidPrintStackTrace">
     <properties>
