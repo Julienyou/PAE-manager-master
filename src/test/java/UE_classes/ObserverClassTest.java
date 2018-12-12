@@ -1,4 +1,4 @@
-package UE_classes;
+package ue_classes;
 
 import org.junit.Assert;
 import org.junit.Test;

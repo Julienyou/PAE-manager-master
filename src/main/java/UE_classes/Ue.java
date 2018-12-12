@@ -1,4 +1,4 @@
-package UE_classes;
+package ue_classes;
 
 public class Ue {
     private String name;
@@ -47,7 +47,7 @@ public class Ue {
 
     /**
      * Setter for hours, int will probably be calculated
-     * using the sum of UE_classes.ObservableClass's hours
+     * using the sum of ue_classes.ObservableClass's hours
      *
      * @param hours int
      */
@@ -66,7 +66,7 @@ public class Ue {
 
     /**
      * Setter for credits, int will probably be calculated
-     * using the sum of UE_classes.ObservableClass's credits
+     * using the sum of ue_classes.ObservableClass's credits
      *
      * @param creds int
      */

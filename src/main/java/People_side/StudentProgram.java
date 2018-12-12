@@ -1,10 +1,7 @@
-package People_side;
-
-import ECAM_side.Bloc;
-import ECAM_side.Ecam;
-import ECAM_side.Program;
-import UE_classes.ObservableUe;
-import UE_classes.ObserverUe;
+package people_side;
+import ecam_side.Ecam;
+import ue_classes.ObservableUe;
+import ue_classes.ObserverUe;
 
 import java.util.*;
 

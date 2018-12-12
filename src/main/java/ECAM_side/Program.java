@@ -1,4 +1,4 @@
-package ECAM_side;
+package ecam_side;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +16,10 @@ public class Program {
     }
 
     /**
-     * Get a specific ECAM_side.Bloc from a program
+     * Get a specific ecam_side.Bloc from a program
      *
      * @param  year int
-     * @return ECAM_side.Bloc
+     * @return ecam_side.Bloc
      */
     public Bloc getBloc(int year){
         return years.get(year - 1);

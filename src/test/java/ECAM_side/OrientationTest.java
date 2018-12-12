@@ -1,4 +1,4 @@
-package ECAM_side;
+package ecam_side;
 
 import org.junit.Assert;
 import org.junit.Before;

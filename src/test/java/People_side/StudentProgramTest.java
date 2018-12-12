@@ -1,7 +1,7 @@
-package People_side;
+package people_side;
 
-import ECAM_side.Ecam;
-import UE_classes.ObserverUe;
+import ecam_side.Ecam;
+import ue_classes.ObserverUe;
 import org.junit.Assert;
 import org.junit.Test;
 

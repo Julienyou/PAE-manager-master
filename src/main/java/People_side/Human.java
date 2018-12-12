@@ -1,4 +1,4 @@
-package People_side;
+package people_side;
 
 public class Human {
     private String name;

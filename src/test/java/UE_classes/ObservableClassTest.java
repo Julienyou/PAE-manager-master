@@ -1,6 +1,6 @@
-package UE_classes;
+package ue_classes;
 
-import People_side.Teacher;
+import people_side.Teacher;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,11 +1,11 @@
-import ECAM_side.Bloc;
-import ECAM_side.Ecam;
-import ECAM_side.Orientation;
-import ECAM_side.Program;
-import People_side.Student;
-import UE_classes.ObservableClass;
-import UE_classes.ObservableUe;
-import UE_classes.ObserverUe;
+import ecam_side.Bloc;
+import ecam_side.Ecam;
+import ecam_side.Orientation;
+import ecam_side.Program;
+import people_side.Student;
+import ue_classes.ObservableClass;
+import ue_classes.ObservableUe;
+import ue_classes.ObserverUe;
 
 import java.util.Arrays;
 import java.util.HashMap;
