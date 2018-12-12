@@ -39,19 +39,6 @@
              so content is big and that is by design. -->
         <exclude name="CommentSize"/>
     </rule>
-    <rule ref="category/java/documentation.xml/CommentRequired">
-        <properties>
-            <!-- *TokenTypes are special class, comments are as trailing comments.
-                 RequireThisCheck$AbstractFrame is a private class, no comment is required.
-                 Main.runCli has a false positive for an anonymous class.
-            -->
-            <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceDeclaration[@Image='JavadocTokenTypes']
-      | //ClassOrInterfaceDeclaration[@Image='RequireThisCheck']
-      | //ClassOrInterfaceDeclaration[@Image='AbstractFrame']
-      | //ClassOrInterfaceDeclaration[@Image='Main']//MethodDeclaration[@Name='runCli']"/>
-        </properties>
-    </rule>
 
     <rule ref="category/java/codestyle.xml">
         <!-- Opposite to UnnecessaryConstructor. -->
@@ -80,7 +67,7 @@
         <exclude name="FormalParameterNamingConventions"/>
         <exclude name="FieldNamingConventions"/>
         <exclude name="FormalParameterNamingConventions"/>
-        <!-- <exclude name="LocalVariableNamingConventions"/> -->
+        <exclude name="LinguisticNaming"/>
     </rule>
     <rule ref="category/java/codestyle.xml/AbstractNaming">
         <properties>
@@ -185,6 +172,7 @@
         <exclude name="LawOfDemeter"/>
         <!-- We use our ImportControl to control imports in packages and classes. -->
         <exclude name="LoosePackageCoupling"/>
+        <exclude name="SingularField"/>
     </rule>
     <rule ref="category/java/design.xml/AvoidCatchingGenericException">
         <properties>
