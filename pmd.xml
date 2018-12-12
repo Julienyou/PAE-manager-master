@@ -33,15 +33,7 @@
                            //MethodDeclaration[@Name='visitJavadocToken']"/>
         </properties>
     </rule>
-    <rule ref="category/java/bestpractices.xml/SystemPrintln">
-        <properties>
-            <!-- it is ok to use println in CLI class. -->
-            <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceDeclaration
-                       [@Image='Main' or @Image='Main$CliOptions'
-                       or @Image='JavadocPropertiesGenerator']"/>
-        </properties>
-    </rule>
+
 
     <rule ref="category/java/documentation.xml">
         <!-- We use class comments as source for xdoc files,
