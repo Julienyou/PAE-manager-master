@@ -8,6 +8,11 @@ import java.util.Map;
 public class Bloc {
     private Map<String, ObservableUe> content;
 
+    /**
+     * Constructor of the class Bloc
+     *
+     * @param content HashMap<String, ObservableUe>
+     */
     public Bloc(HashMap<String, ObservableUe> content){
         this.content = content;
     }

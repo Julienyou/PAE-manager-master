@@ -13,6 +13,11 @@ import java.util.Scanner;
 
 public class Main {
 
+    /**
+     * Main function which is run
+     *
+     * @param args String[]
+     */
     public static void main( final String[] args) {
         System.out.print("Launching...\n");
 
