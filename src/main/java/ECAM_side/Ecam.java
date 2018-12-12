@@ -15,6 +15,9 @@ public class Ecam {
     private Map<Integer, Teacher> teachers;
     private Map<Integer, Student> students;
 
+    /**
+     * Constructor of the class Ecam
+     */
     private Ecam(){
         this.orientations = new HashMap<String, Orientation>();
         this.teachers = new HashMap<Integer, Teacher>();
@@ -75,10 +78,19 @@ public class Ecam {
         students.put(std.getId(), std);
     }
 
+    /**
+     * Add a code and an orientation to the map "orientations"
+     *
+     * @param code String
+     * @param orn Orientation
+     */
     public void addOrientation(String code, Orientation orn){
         orientations.put(code, orn);
     }
 
+    /**
+     * Allow to setup tests
+     */
     public void init(){
         ObservableClass class1 = new ObservableClass("DD4L", "1");
         ObservableClass class2 = new ObservableClass("DD4X", "2");

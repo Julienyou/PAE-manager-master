@@ -7,6 +7,12 @@ public class Ue {
     private int credits;
     private String info_sheet;
 
+    /**
+     * Constructor of the class Ue
+     *
+     * @param name String
+     * @param code String
+     */
     public Ue(String name, String code){
         this.name = name;
         this.code = code;
@@ -81,8 +87,9 @@ public class Ue {
 
     /**
      * Getter for class infosheet
+     * Should take as param : String (path to infosheet)
      *
-     * @param String (path to infosheet)
+     * @return info_sheet String
      */
     public String getInfoSheet(){
         return info_sheet;

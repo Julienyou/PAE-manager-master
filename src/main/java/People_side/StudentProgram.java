@@ -1,5 +1,4 @@
 package people_side;
-
 import ecam_side.Ecam;
 import ue_classes.ObservableUe;
 import ue_classes.ObserverUe;
@@ -13,6 +12,13 @@ public class StudentProgram {
     private int ncredits;
     private Map<String, ObserverUe> content;
 
+    /**
+     * Constructor of the class StudentProgram
+     *
+     * @param year String
+     * @param acyear String
+     * @param owner String
+     */
     public StudentProgram(String year, String acyear, String owner) {
         this.year = year;
         this.academic_year = acyear;

@@ -34,7 +34,6 @@
                            //MethodDeclaration[@Name='visitJavadocToken']"/>
         </properties>
     </rule>
-    
     <rule ref="category/java/documentation.xml">
         <!-- We use class comments as source for xdoc files,
              so content is big and that is by design. -->
@@ -142,6 +141,7 @@
         <!-- Till https://github.com/checkstyle/checkstyle/issues/5680 -->
         <exclude name="UseProperClassLoader"/>
         <exclude name="MissingSerialVersionUID"/>
+
     </rule>
     <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
         <properties>
@@ -353,7 +353,6 @@
                            //MethodDeclarator[@Image='put']"/>
         </properties>
     </rule>
-
     <rule ref="category/java/performance.xml">
         <!-- Produces more false positives than real problems. -->
         <exclude name="AvoidInstantiatingObjectsInLoops"/>

@@ -11,6 +11,13 @@ public class ObserverUe extends Ue {
     private Boolean accept_status;
     private List<ObserverClass> classes;
 
+    /**
+     * Constructor of the class ObserverUe
+     *
+     * @param name String
+     * @param code String
+     * @param owner String
+     */
     public ObserverUe(String name, String code, String owner){
         super(name, code);
         this.id = ++amount;

@@ -7,6 +7,13 @@ public class Student extends Human {
     private final int matricule;
     private List<StudentProgram> program;
 
+    /**
+     * Constructor of the class Student
+     *
+     * @param name String
+     * @param lastname String
+     * @param matricule int
+     */
     public Student(String name, String lastname, int matricule) {
         super(name, lastname);
         this.matricule = matricule;
