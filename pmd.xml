@@ -179,6 +179,8 @@
         <exclude name="SingularField"/>
         <exclude name="ImmutableField"/>
         <exclude name="ExcessiveMethodLength"/>
+        <exclude name="ClassWithOnlyPrivateConstructorsShouldBeFinal"/>
+
     </rule>
     <rule ref="category/java/design.xml/AvoidCatchingGenericException">
         <properties>
