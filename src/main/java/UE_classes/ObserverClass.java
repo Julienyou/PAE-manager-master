@@ -7,6 +7,13 @@ public class ObserverClass extends Class {
     private String owner;
     private Boolean validated;
 
+    /**
+     * Constructor of the class ObserverClass
+     *
+     * @param name String
+     * @param code String
+     * @param owner String
+     */
     public ObserverClass(String name, String code, String owner){
         super(name, code);
         this.id = ++amount;

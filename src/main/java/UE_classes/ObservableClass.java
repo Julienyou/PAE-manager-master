@@ -8,6 +8,12 @@ import java.util.List;
 public class ObservableClass extends Class {
     private List<ObserverClass> observers;
 
+    /**
+     * Constructor of the class ObservableClass
+     *
+     * @param name String
+     * @param code String
+     */
     public ObservableClass(String name, String code){
         super(name, code);
         this.observers = new ArrayList<ObserverClass>();

@@ -8,6 +8,12 @@ public class ObservableUe extends Ue {
     private List<ObserverUe> observers;
     private List<ObservableClass> classes;
 
+    /**
+     * Constructor of the class ObservableUe
+     *
+     * @param name String
+     * @param code String
+     */
     public ObservableUe(String name, String code){
         super(name, code);
         this.observers = new ArrayList<ObserverUe>();
@@ -17,7 +23,7 @@ public class ObservableUe extends Ue {
     /**
      * Getter for observers
      *
-     * @retun List<ObserverUe>
+     * @return List<ObserverUe>
      */
     public List<ObserverUe> getObservers() {
         return observers;
@@ -74,6 +80,11 @@ public class ObservableUe extends Ue {
         }
     }
 
+    /**
+     * Add a class to the list classes
+     *
+     * @param single_class ObservableClass
+     */
     public void addClass(ObservableClass single_class){
         classes.add(single_class);
     }
