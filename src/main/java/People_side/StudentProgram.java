@@ -41,15 +41,7 @@ public class StudentProgram {
         return content;
     }
 
-    /**
-     * Add content to content list thanks to
-     * year and code. f.e.: 4MIN, SA4L
-     * -> uses year and code to fetch an ObservableUe
-     * from ECAM to add a new ObserverUe to content
-     *
-     * @param year String
-     * @param code String
-     */
+    
     public void addContent(String year, String code){
         Ecam ecam = Ecam.getInstance();
         int int_year = Integer.parseInt(year.substring(0, 1));
