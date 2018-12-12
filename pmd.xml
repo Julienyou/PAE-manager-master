@@ -178,6 +178,7 @@
         <exclude name="LoosePackageCoupling"/>
         <exclude name="SingularField"/>
         <exclude name="ImmutableField"/>
+        <exclude name="ExcessiveMethodLength"/>
     </rule>
     <rule ref="category/java/design.xml/AvoidCatchingGenericException">
         <properties>
@@ -309,16 +310,6 @@
             <property name="violationSuppressXPath"
                       value="//ClassOrInterfaceDeclaration[@Image='RequireThisCheck'
         or @Image='PackageObjectFactory']"/>
-        </properties>
-    </rule>
-    <rule ref="category/java/design.xml/ExcessiveClassLength">
-        <properties>
-            <!-- *TokenTypes are special classes that are big due to a lot of description comments.
-                 JavadocMethodCheck is a deprecated class, till it is redone to use JavadocAst.
-                 RequireThisCheck has to work with and identify many frames. -->
-            <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceDeclaration[@Image='JavadocTokenTypes'
-        or @Image='TokenTypes' or @Image='JavadocMethodCheck' or @Image='RequireThisCheck']"/>
         </properties>
     </rule>
     <rule ref="category/java/design.xml/ExcessiveParameterList">
