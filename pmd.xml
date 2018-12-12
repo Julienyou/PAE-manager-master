@@ -77,7 +77,6 @@
         <!-- We use CheckstyleCustomShortVariable, to control the length and skip Override methods. -->
         <exclude name="ShortVariable"/>
         <exclude name="LocalVariableNamingConventions"/>
-        <exclude name="ShortClassName"/>
         <exclude name="FormalParameterNamingConventions"/>
         <exclude name="FieldNamingConventions"/>
         <exclude name="FormalParameterNamingConventions"/>
@@ -132,14 +131,6 @@
             <!-- Nothing bad with the long and descriptive variable names if only they fit the line,
                  but still keep it reasonable. -->
             <property name="minimum" value="45"/>
-        </properties>
-    </rule>
-    <rule ref="category/java/codestyle.xml/ShortClassName">
-        <properties>
-            <!-- Main is a good name for the class containing the main method.
-                 Tag as inner class name is fine. -->
-            <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceDeclaration[@Image='Main' or @Image='Tag']"/>
         </properties>
     </rule>
     <rule ref="category/java/errorprone.xml">
@@ -314,14 +305,6 @@
             <property name="violationSuppressXPath"
                       value="//ClassOrInterfaceDeclaration[@Image='Checker']
     | //ClassOrInterfaceDeclaration[@Image='Main']"/>
-        </properties>
-    </rule>
-    <rule ref="category/java/design.xml/ImmutableField">
-        <properties>
-            <!-- Main has annotated fields whose value is injected by picocli.
-              These fields should not be marked final. -->
-            <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceDeclaration[@Image='Main']"/>
         </properties>
     </rule>
     <rule ref="category/java/design.xml/TooManyMethods">
