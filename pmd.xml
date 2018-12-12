@@ -70,6 +70,7 @@
         <exclude name="FieldNamingConventions"/>
         <exclude name="FormalParameterNamingConventions"/>
         <exclude name="LinguisticNaming"/>
+        <exclude name="ShortClassName"/>
     </rule>
     <rule ref="category/java/codestyle.xml/AbstractNaming">
         <properties>
@@ -140,6 +141,7 @@
         <exclude name="NullAssignment"/>
         <!-- Till https://github.com/checkstyle/checkstyle/issues/5680 -->
         <exclude name="UseProperClassLoader"/>
+        <exclude name="MissingSerialVersionUID"/>
     </rule>
     <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
         <properties>
