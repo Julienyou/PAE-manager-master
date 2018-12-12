@@ -86,6 +86,12 @@
         <!-- We use CheckstyleCustomShortVariable, to control the length and skip Override methods. -->
         <exclude name="ShortVariable"/>
         <exclude name="LocalVariableNamingConventions"/>
+        <exclude name="ShortClassName"/>
+        <exclude name="FormalParameterNamingConventions"/>
+        <exclude name="FieldNamingConventions"/>
+        <exclude name="FormalParameterNamingConventions"/>
+        <!-- <exclude name="LocalVariableNamingConventions"/> -->
+        <!-- <exclude name="LocalVariableNamingConventions"/> -->
     </rule>
     <rule ref="category/java/codestyle.xml/AbstractNaming">
         <properties>
