@@ -42,7 +42,6 @@
                        or @Image='JavadocPropertiesGenerator']"/>
         </properties>
     </rule>
-
     <rule ref="category/java/documentation.xml">
         <!-- We use class comments as source for xdoc files,
              so content is big and that is by design. -->
