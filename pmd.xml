@@ -39,6 +39,7 @@
         <!-- We use class comments as source for xdoc files,
              so content is big and that is by design. -->
         <exclude name="CommentSize"/>
+        <exclude name="CommentRequired"/>
     </rule>
 
     <rule ref="category/java/codestyle.xml">
@@ -174,6 +175,7 @@
         <!-- We use our ImportControl to control imports in packages and classes. -->
         <exclude name="LoosePackageCoupling"/>
         <exclude name="SingularField"/>
+        <exclude name="ImmutableField"/>
     </rule>
     <rule ref="category/java/design.xml/AvoidCatchingGenericException">
         <properties>
