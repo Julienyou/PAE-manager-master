@@ -59,5 +59,8 @@
     <module name="JavadocMethod">
       <property name="scope" value="public"/>
     </module>
+    <module name="JavadocMethod">
+      <property name="scope" value="private"/>
+    </module>
   </module>
 </module>
