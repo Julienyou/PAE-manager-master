@@ -11,6 +11,12 @@ public class Class {
     protected int nhours;
     protected Map<Integer, Teacher> teachers;
 
+    /**
+     * Constructor of the class Class
+     *
+     * @param name String
+     * @param code String
+     */
     public Class(String name, String code){
         this.name = name;
         this.code = code;

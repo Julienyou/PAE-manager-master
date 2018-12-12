@@ -15,6 +15,9 @@ public class Ecam {
     private Map<Integer, Teacher> teachers;
     private Map<Integer, Student> students;
 
+    /**
+     * Constructor of the class Ecam
+     */
     private Ecam(){
         this.orientations = new HashMap<String, Orientation>();
         this.teachers = new HashMap<Integer, Teacher>();
