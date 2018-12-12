@@ -1,6 +1,5 @@
 package UE_classes;
 
-import UE_classes.Class;
 
 public class ObserverClass extends Class {
     private int id;

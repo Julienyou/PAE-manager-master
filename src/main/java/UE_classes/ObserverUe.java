@@ -1,9 +1,6 @@
 package UE_classes;
 
-import UE_classes.Ue;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ObserverUe extends Ue {
