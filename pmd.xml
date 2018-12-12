@@ -85,6 +85,7 @@
         <exclude name="OnlyOneReturn"/>
         <!-- We use CheckstyleCustomShortVariable, to control the length and skip Override methods. -->
         <exclude name="ShortVariable"/>
+        <exclude name="LocalVariableNamingConventions"/>
     </rule>
     <rule ref="category/java/codestyle.xml/AbstractNaming">
         <properties>
