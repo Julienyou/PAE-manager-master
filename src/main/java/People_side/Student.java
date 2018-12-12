@@ -1,4 +1,4 @@
-package People_side;
+package people_side;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,7 +83,7 @@ public class Student extends Human {
     }
 
     /**
-     * Add a new People_side.StudentProgram object to the
+     * Add a new people_side.StudentProgram object to the
      * program list, representing a new year for
      * the student
      *

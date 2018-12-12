@@ -1,4 +1,4 @@
-package People_side;
+package people_side;
 
 import java.util.ArrayList;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package People_side;
+package people_side;
 
 import org.junit.Assert;
 import org.junit.Test;

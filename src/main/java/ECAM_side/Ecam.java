@@ -1,9 +1,9 @@
-package ECAM_side;
+package ecam_side;
 
-import People_side.Student;
-import People_side.Teacher;
-import UE_classes.ObservableClass;
-import UE_classes.ObservableUe;
+import people_side.Student;
+import people_side.Teacher;
+import ue_classes.ObservableClass;
+import ue_classes.ObservableUe;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -27,7 +27,7 @@ public class Ecam {
     /**
      * Get singleton instance
      *
-     * @return ECAM_side.Ecam
+     * @return ecam_side.Ecam
      */
     public static Ecam getInstance(){
         return instance;
@@ -44,7 +44,7 @@ public class Ecam {
      * -> Electromecanique
      *
      * @param  code String
-     * @return ECAM_side.Orientation
+     * @return ecam_side.Orientation
      */
     public Orientation getOrientation(String code){
         return orientations.get(code);

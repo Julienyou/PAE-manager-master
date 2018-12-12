@@ -1,4 +1,4 @@
-package ECAM_side;
+package ecam_side;
 
 public class Orientation {
     private String name;
@@ -30,7 +30,7 @@ public class Orientation {
     /**
      * Getter for bachelor
      *
-     * @return ECAM_side.Program
+     * @return ecam_side.Program
      */
     public Program getBachelor(){
         return bachelor;
@@ -39,7 +39,7 @@ public class Orientation {
     /**
      * Getter for master
      *
-     * @return ECAM_side.Program
+     * @return ecam_side.Program
      */
     public Program getMaster(){
         return master;
