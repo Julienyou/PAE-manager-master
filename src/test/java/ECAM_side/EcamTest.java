@@ -1,6 +1,6 @@
-package ECAM_side;
+package ecam_side;
 
-import People_side.Student;
+import people_side.Student;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,6 +1,6 @@
-package ECAM_side;
+package ecam_side;
 
-import UE_classes.ObservableUe;
+import ue_classes.ObservableUe;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

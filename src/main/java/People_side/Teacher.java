@@ -1,4 +1,4 @@
-package People_side;
+package people_side;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -60,7 +60,7 @@ public class Teacher extends Human {
      *
      * @param matricule int
      *                  student matricule
-     * outputs: List<People_side.StudentProgram>
+     * outputs: List<people_side.StudentProgram>
      */
     public void getStudentPae(){}
 

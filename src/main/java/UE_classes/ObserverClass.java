@@ -1,4 +1,4 @@
-package UE_classes;
+package ue_classes;
 
 
 public class ObserverClass extends Class {
@@ -47,7 +47,7 @@ public class ObserverClass extends Class {
     }
 
     /**
-     * Used in UE_classes.ObservableClass to update all observer
+     * Used in ue_classes.ObservableClass to update all observer
      * classes, puts the hours up to date
      *
      * @param hours int
